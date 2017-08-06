@@ -20,7 +20,7 @@ services:
     - 2368:2368
     volumes:
     - ghostdata:/opt/ghost/home
-    - .:/opt/ghost/content/themes/ghost-seer
+    - ./dist:/opt/ghost/content/themes/ghost-seer
 
   mysql:
     image: mysql:5.7
