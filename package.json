@@ -1,0 +1,8 @@
+{
+  "name": "ghost-seer",
+  "description": "Ghost theme for my personal blog. Edit",
+  "version": "0.0.1",
+  "repository": "git@github.com:SeerUK/ghost-seer.git",
+  "author": "Elliot Wright <hello@elliotdwright.com>",
+  "license": "MIT"
+}
