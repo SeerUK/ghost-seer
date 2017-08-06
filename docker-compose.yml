@@ -12,12 +12,15 @@ services:
     - GHOST_DB_NAME=ghost
     - GHOST_ENV=development
     - GHOST_VERSION=1.5.0
+    # - GHOST_UID=1000
+    # - GHOST_GID=1000
     links:
     - mysql:db.docker
     ports:
     - 2368:2368
     volumes:
-    - ./ghost:/opt/ghost
+    - ghostdata:/opt/ghost/home
+    - .:/opt/ghost/content/themes/ghost-seer
 
   mysql:
     image: mysql:5.7
@@ -29,8 +32,10 @@ services:
     ports:
     - 3316:3306
     volumes:
-    - dbdata:/var/lib/mysql
+    - mysqldata:/var/lib/mysql
 
 volumes:
-  dbdata:
+  ghostdata:
+    driver: local
+  mysqldata:
     driver: local
