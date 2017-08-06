@@ -5,7 +5,8 @@ node_modules/
 docker-compose.override.yml
 
 # Ghost
-ghost/
+ghost/*
+!ghost/.gitkeep
 
 # Logs
 logs/
