@@ -67,13 +67,8 @@
         right: 50%;
         margin: 5rem -50vw;
         
-        @media screen and (min-width: 72 * $font-size-base) {
-            width: calc(100vw - 12rem);
-            margin: 5rem calc(-50vw + 6rem);
-        }
-        
-        @media screen and (min-width: 102 * $font-size-base) {
-            border-radius: 5px;
+        @media screen and (min-width: 90 * $font-size-base) {
+            border-radius: 3px;
             left: auto;
             right: auto;
             max-width: 900px;

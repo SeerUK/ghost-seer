@@ -1,7 +1,8 @@
 .gs-post-navigation {
+    // @todo: Change style, instead of hiding. Maybe show at bottom of page instead?
     display: none;
     
-    @media screen and (min-width: 72 * $font-size-base) {
+    @media screen and (min-width: 102 * $font-size-base) {
         display: block;
     }
     
