@@ -3,6 +3,31 @@
   "description": "Ghost theme for my personal blog. Edit",
   "version": "0.0.1",
   "repository": "git@github.com:SeerUK/ghost-seer.git",
-  "author": "Elliot Wright <hello@elliotdwright.com>",
-  "license": "MIT"
+  "author": {
+    "name": "Elliot Wright",
+    "email": "hello@elliotdwright.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^7.1.2",
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-loader": "^0.5.0",
+    "html-webpack-plugin": "^2.30.1",
+    "postcss-loader": "^2.0.6",
+    "resolve-url-loader": "^2.1.0",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1",
+    "yarn": "^0.27.5"
+  },
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "logdown": "^3.1.0",
+    "node-sass": "^4.5.3",
+    "normalize-scss": "^7.0.0"
+  }
 }
