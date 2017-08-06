@@ -1,0 +1,16 @@
+.gs-post-header {
+    max-width: 66rem;
+    margin: 0 auto;
+    padding: 10rem 3rem;
+    text-align: center;
+    
+    &__title {
+        font-size: 6rem;
+    }
+    
+    &__date {
+        color: $clr-foreground-l3;
+        font-size: 1.4rem;
+        margin-top: 1.7rem;
+    }
+}

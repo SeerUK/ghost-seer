@@ -1,0 +1,40 @@
+.gs-post-navigation {
+    display: none;
+    
+    @media screen and (min-width: 72 * $font-size-base) {
+        display: block;
+    }
+    
+    &__next,
+    &__prev {
+        position: fixed;
+        width: 100vh;
+        text-align: center;
+        top: -6rem;
+        
+        a {
+            color: $clr-foreground-l1;
+            display: inline-block;
+            font-size: 1.2rem;
+            line-height: 6rem;
+            text-align: center;
+            text-transform: uppercase;
+            transform: rotate(-180deg);
+            letter-spacing: 1px;
+            word-spacing: 0.4rem;
+            width: 100vh;
+        }
+    }
+    
+    &__next {
+        transform: rotate(-90deg);
+        transform-origin: bottom right;
+        right: 0
+    }
+    
+    &__prev {
+        transform: rotate(-270deg);
+        transform-origin: bottom left;
+        left: 0;
+    }
+}

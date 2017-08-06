@@ -1,0 +1,58 @@
+html {
+    font-size: $font-size-base;
+}
+
+body {
+    color: $clr-foreground-l1;
+    font-family: $font-family-base;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $clr-primary-l4;
+    font-weight: 400;
+    margin: 0;
+}
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.4rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.6rem;
+}
+
+a {
+    $clr-anchor: $clr-secondary-l3;
+    
+    color: $clr-anchor;
+    text-decoration: none;
+    text-decoration-color: $clr-anchor;
+    text-decoration-skip: ink;
+    
+    &:hover {
+        text-decoration: underline;
+    }
+}

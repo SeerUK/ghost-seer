@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: $clr-background-l2;
+}
+
+body {
+    background: $clr-background-l1;
+}

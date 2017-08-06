@@ -1,0 +1,14 @@
+$gs-tablet-width: 768px;
+$gs-desktop-width: 1024px;
+
+@mixin tablet {
+    @media (min-width: #{$gs-tablet-width}) and (max-width: #{$gs-desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$gs-desktop-width}) {
+        @content;
+    }
+}

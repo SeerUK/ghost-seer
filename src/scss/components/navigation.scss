@@ -1,0 +1,43 @@
+.gs-navigation {
+    background: $clr-background-l2;
+    height: 5rem;
+    line-height: 5rem;
+    
+    &__wrapper {
+        max-width: 66rem;
+        margin: 0 auto;
+        padding: 0 3rem;
+        position: relative;
+    }
+    
+    &__logo {
+        a {
+            color: $clr-primary-l4;
+            
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    
+    &__links {
+        height: 5rem;
+        line-height: 5rem;
+        position: absolute;
+        top: 0;
+        right: 3rem;
+        
+        ul,
+        ol {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            float: left;
+            list-style: none;
+            margin-left: 1rem;
+        }
+    }
+}

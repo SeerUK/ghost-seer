@@ -1,1 +1,46 @@
 {{!< default}}
+
+{{> "nav"}}
+
+{{#post}}
+
+    <main class="gs-post {{post_class}}">
+        <section class="gs-post-header">
+            <h1 class="gs-post-header__title">
+                {{title}}
+            </h1>
+
+            <div class="gs-post-header__date">
+                <time datetime="{{date format="YYYY-MM-DD"}}">
+                    on {{date format="DD MMMM, YYYY"}}
+                </time>
+                in {{tags}}
+            </div>
+        </section>
+
+        <article class="gs-post-content">
+            {{content}}
+        </article>
+    </main>
+
+    {{#prev_post}}
+
+        <div class="gs-post-navigation gs-post-navigation__prev">
+            <a href="{{url}}">
+                Previous article
+            </a>
+        </div>
+
+    {{/prev_post}}
+
+    {{#next_post}}
+
+        <div class="gs-post-navigation gs-post-navigation__next">
+            <a href="{{url}}">
+                Next article
+            </a>
+        </div>
+
+    {{/next_post}}
+
+{{/post}}

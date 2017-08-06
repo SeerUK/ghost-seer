@@ -47,20 +47,21 @@ module.exports = {
     },
     output: {
         path: path.join(cwd, "dist"),
-        filename: "[name].[hash].bundle.js",
-        chunkFilename: "[id].[hash].chunk.js"
+        filename: "assets/js/[name].[hash].bundle.js",
+        chunkFilename: "assets/js/[id].[hash].chunk.js"
     },
     plugins: [
         new CleanObsoleteChunks(),
         new CopyWebpackPlugin([
             { from: "package.json" },
-            { from: "*.hbs" }
+            { from: "**/*.hbs" }
         ], { copyUnmodified: true }),
         new ExtractTextPlugin({
-            filename: "app.[hash].css"
+            filename: "assets/css/app.[hash].css"
         }),
         new HtmlWebpackPlugin({
             cache: false,
+            inject: false,
             filename: "default.hbs",
             template: "default.hbs"
         }),
