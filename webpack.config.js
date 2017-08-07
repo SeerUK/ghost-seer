@@ -1,6 +1,6 @@
 "use strict";
 
-const CleanObsoleteChunks = require("webpack-clean-obsolete-chunks");
+const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -51,7 +51,12 @@ module.exports = {
         chunkFilename: "assets/js/[id].[hash].chunk.js"
     },
     plugins: [
-        new CleanObsoleteChunks(),
+        new CleanWebpackPlugin([ "dist" ], {
+            exclude: [
+                ".gitkeep"
+            ],
+            watch: true
+        }),
         new CopyWebpackPlugin([
             { from: "package.json" },
             { from: "**/*.hbs" }
