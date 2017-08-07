@@ -43,6 +43,43 @@
 
     {{/next_post}}
 
+    {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="2" order="published_at desc" as |related_posts|}}
+        {{#if related_posts}}
+
+            <section class="gs-related">
+                <div class="gs-related__wrapper">
+                    <div class="gs-related__title">
+                        More about
+                        <a href="{{@blog.url}}/tag/{{../../primary_tag.slug}}/">
+                            {{../primary_tag.name}}
+                        </a>
+                    </div>
+
+                    <ul class="gs-related__posts">
+
+                        {{#foreach related_posts}}
+
+                            <li class="gs-related__post">
+                                <div class="gs-related__post-title">
+                                    <a href="{{url}}">
+                                        {{title}}
+                                    </a>
+                                </div>
+
+                                <div class="gs-related__post-date">
+                                    {{date format="DD MMMM, YYYY"}}
+                                </div>
+                            </li>
+
+                        {{/foreach}}
+
+                    </ul>
+                </div>
+            </section>
+
+        {{/if}}
+    {{/get}}
+
 {{/post}}
 
 {{> "footer"}}

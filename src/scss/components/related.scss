@@ -1,0 +1,41 @@
+.gs-related {
+    border-top: 1px solid $clr-foreground-l4;
+    
+    &__wrapper {
+        max-width: 66rem;
+        margin: 5rem auto;
+        padding: 0 3rem;
+        text-align: center;
+    }
+    
+    &__title {
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    &__posts {
+        margin: 5rem 0;
+        padding: 0;
+    }
+    
+    &__post {
+        list-style: none;
+        margin: 0 0 5rem;
+        padding: 0;
+        
+        &-title {
+            font-size: 2.4rem;
+            margin: 0 0 1rem;
+            
+            &,
+            a {
+                color: $clr-primary-l4;
+            }
+        }
+        
+        &-date {
+            font-size: 1.4rem;
+        }
+    }
+}
