@@ -1,0 +1,81 @@
+.gs-footer {
+    background: $clr-background-l2;
+    
+    &__wrapper {
+        max-width: 66rem;
+        margin: 0 auto;
+        padding: 5rem 3rem;
+    }
+    
+    &__copyright {
+        color: $clr-foreground-l3;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        
+        em {
+            color: $clr-foreground-l1;
+            font-style: normal;
+        }
+    }
+    
+    &__subscribe {
+        font-family: $font-family-sans-serif;
+        margin: 5rem 0;
+        text-align: center;
+        
+        form {
+            @include clearfix;
+            
+            border: 2px solid $clr-primary-l4;
+            display: inline-block;
+            
+            .form-group {
+                border: none;
+                float: left;
+                width: 350px;
+                
+                input {
+                    background: transparent;
+                    border: none;
+                    color: $clr-primary-l4;
+                    display: inline-block;
+                    font-family: $font-family-sans-serif;
+                    height: 50px;
+                    line-height: 50px;
+                    padding: 0 1.4rem;
+                    width: 100%;
+                    
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+            
+            button[type=submit] {
+                background: transparent;
+                border: none;
+                border-left: 2px solid $clr-primary-l4;
+                color: $clr-primary-l4;
+                cursor: pointer;
+                float: left;
+                font-family: $font-family-sans-serif;
+                font-weight: bold;
+                height: 50px;
+                text-transform: uppercase;
+                width: 150px;
+    
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        
+        &-message {
+            color: $clr-foreground-l0;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+    }
+}
