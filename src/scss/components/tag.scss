@@ -1,4 +1,4 @@
-.gs-post-header {
+.gs-tag {
     max-width: 66rem;
     margin: 0 auto;
     padding: 10rem 3rem;
@@ -6,13 +6,13 @@
     
     &__title {
         font-size: 5rem;
-        
+    
         @media screen and (min-width: 42 * $font-size-base) {
             font-size: 6rem;
         }
     }
     
-    &__meta {
+    &__description {
         color: $clr-foreground-l3;
         font-size: 1.4rem;
         margin-top: 1.7rem;

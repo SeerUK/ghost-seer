@@ -1,0 +1,24 @@
+<section class="gs-articles">
+    {{#foreach posts}}
+        <article class="gs-articles__item {{post_class}}">
+            <section class="gs-articles__item-post">
+                <header class="gs-articles__item-title">
+                    <a href="{{url}}">{{title}}</a>
+                </header>
+
+                <section class="gs-articles__item-meta">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">
+                        on {{date format="DD MMMM, YYYY"}}
+                    </time>
+                    in {{tags}}
+                </section>
+
+                <section class="gs-articles__item-excerpt">
+                    {{excerpt characters="128"}}&hellip;
+                </section>
+            </section>
+        </article>
+    {{/foreach}}
+</section>
+
+{{pagination}}

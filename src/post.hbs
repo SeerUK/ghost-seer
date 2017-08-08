@@ -11,18 +11,18 @@
     </div> --}}
 
     <main class="gs-post {{post_class}}">
-        <section class="gs-post-header">
+        <header class="gs-post-header">
             <h1 class="gs-post-header__title">
                 {{title}}
             </h1>
 
-            <div class="gs-post-header__date">
+            <div class="gs-post-header__meta">
                 <time datetime="{{date format="YYYY-MM-DD"}}">
                     on {{date format="DD MMMM, YYYY"}}
                 </time>
                 in {{tags}}
             </div>
-        </section>
+        </header>
 
         <article class="gs-post-content">
             {{content}}
@@ -55,8 +55,8 @@
             <section class="gs-related">
                 <div class="gs-related__wrapper">
                     <div class="gs-related__title">
-                        More about
-                        <a href="{{@blog.url}}/tag/{{../../primary_tag.slug}}/">
+                        More in
+                        <a href="{{@blog.url}}/tag/{{../primary_tag.slug}}/">
                             {{../primary_tag.name}}
                         </a>
                     </div>
@@ -73,7 +73,7 @@
                                 </div>
 
                                 <div class="gs-related__post-date">
-                                    {{date format="DD MMMM, YYYY"}}
+                                    on {{date format="DD MMMM, YYYY"}}
                                 </div>
                             </li>
 
