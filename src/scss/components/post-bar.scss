@@ -1,0 +1,22 @@
+.gs-post-bar {
+    background: $clr-background-l1;
+    border: 1px solid $clr-foreground-l4;
+    height: 5rem;
+    line-height: 5rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 66rem;
+        overflow: hidden;
+        padding: 0 3rem;
+        position: relative;
+        text-align: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

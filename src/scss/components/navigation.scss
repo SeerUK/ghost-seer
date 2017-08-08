@@ -2,6 +2,8 @@
     background: $clr-background-l2;
     height: 5rem;
     line-height: 5rem;
+    position: relative;
+    z-index: 3;
     
     &__wrapper {
         max-width: 66rem;
