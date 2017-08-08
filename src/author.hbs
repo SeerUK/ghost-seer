@@ -1,0 +1,29 @@
+{{!< default}}
+
+{{> "nav"}}
+
+{{#author}}
+
+    <header class="gs-author">
+        {{!-- <p>{{feature_image}}</p> --}}
+
+        <h1 class="gs-author__name">
+            {{name}}
+        </h1>
+
+        <div class="gs-author__location">
+            {{location}}
+        </div>
+    </header>
+
+    {{#if bio}}
+        <div class="gs-author__bio">
+            {{bio}}
+        </div>
+    {{/if}}
+
+{{/author}}
+
+{{> "loop"}}
+
+{{> "footer"}}

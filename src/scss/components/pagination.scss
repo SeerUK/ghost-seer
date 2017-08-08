@@ -1,0 +1,24 @@
+.gs-pagination {
+    border-top: 1px solid $clr-foreground-l4;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    
+    &__wrapper {
+        max-width: 66rem;
+        margin: 5rem auto;
+        padding: 0 3rem;
+        position: relative;
+    }
+    
+    &__next {
+        position: absolute;
+        left: 0;
+    }
+    
+    &__prev {
+        position: absolute;
+        right: 0;
+    }
+}

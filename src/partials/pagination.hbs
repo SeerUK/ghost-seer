@@ -1,0 +1,17 @@
+<nav class="gs-pagination" role="navigation">
+    <div class="gs-pagination__wrapper">
+        {{#if prev}}
+            <a class="gs-pagination__next" href="{{page_url prev}}">
+                <div class="gs-pagination__label">Newer posts</div>
+            </a>
+        {{/if}}
+
+        <span class="gs-pagination__page-number">Page {{page}} of {{pages}}</span>
+
+        {{#if next}}
+            <a class="gs-pagination__prev" href="{{page_url next}}">
+                <div class="gs-pagination__label">Older posts</div>
+            </a>
+        {{/if}}
+    </div>
+</nav>

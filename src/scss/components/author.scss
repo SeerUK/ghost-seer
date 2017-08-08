@@ -1,18 +1,24 @@
-.gs-tag {
+.gs-author {
     max-width: 66rem;
     margin: 0 auto;
     padding: 10rem 3rem;
     text-align: center;
     
-    &__title {
+    &__name {
         font-size: 5rem;
-    
+        
         @media screen and (min-width: 42 * $font-size-base) {
             font-size: 6rem;
         }
     }
     
-    &__description {
+    &__location {
+        color: $clr-foreground-l3;
+        font-size: 1.4rem;
+        margin-top: 1.7rem;
+    }
+    
+    &__bio {
         max-width: 66rem;
         margin: 0 auto 10rem;
         padding: 0 3rem;

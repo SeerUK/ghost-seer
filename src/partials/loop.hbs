@@ -1,4 +1,10 @@
 <section class="gs-articles">
+    {{#unless posts}}
+        <div class="gs-articles__zero">
+            {{author.name}} hasn't written any posts.
+        </div>
+    {{/unless}}
+
     {{#foreach posts}}
         <article class="gs-articles__item {{post_class}}">
             <section class="gs-articles__item-post">
