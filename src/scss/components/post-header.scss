@@ -5,7 +5,11 @@
     text-align: center;
     
     &__title {
-        font-size: 6rem;
+        font-size: 5rem;
+        
+        @media screen and (min-width: 42 * $font-size-base) {
+            font-size: 6rem;
+        }
     }
     
     &__date {
