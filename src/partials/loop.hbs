@@ -1,8 +1,16 @@
 <section class="gs-articles">
     {{#unless posts}}
-        <div class="gs-articles__zero">
-            {{author.name}} hasn't written any posts.
-        </div>
+        {{#if author}}
+            <div class="gs-articles__zero">
+                {{author.name}} hasn't written any articles.
+            </div>
+        {{/if}}
+
+        {{#if tag}}
+            <div class="gs-articles__zero">
+                No articles tagged with {{tag.name}}.
+            </div>
+        {{/if}}
     {{/unless}}
 
     {{#foreach posts}}
@@ -27,4 +35,6 @@
     {{/foreach}}
 </section>
 
-{{pagination}}
+{{#if pagination}}
+    {{pagination}}
+{{/if}}

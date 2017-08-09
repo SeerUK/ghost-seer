@@ -3,20 +3,21 @@
     margin: 0 auto;
     padding: 10rem 3rem;
     text-align: center;
-    
+
     &__title {
         font-size: 5rem;
-    
+
         @media screen and (min-width: 42 * $font-size-base) {
             font-size: 6rem;
         }
     }
-    
+
     &__description {
         max-width: 66rem;
         margin: 0 auto 10rem;
         padding: 0 3rem;
         font-size: 2rem;
+        font-weight: 300;
         line-height: 3rem;
         text-align: justify;
     }

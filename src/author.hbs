@@ -13,6 +13,13 @@
 
         <div class="gs-author__location">
             {{location}}
+
+            {{#if website}}
+                &bullet;
+                <a href="{{website}}">
+                    Website
+                </a>
+            {{/if}}
         </div>
     </header>
 
