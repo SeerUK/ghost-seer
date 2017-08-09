@@ -1,49 +1,49 @@
 .gs-footer {
     background: $clr-background-l2;
-    
+
     &__wrapper {
         max-width: 66rem;
         margin: 0 auto;
         padding: 5rem 3rem;
     }
-    
+
     &__copyright {
         color: $clr-foreground-l3;
         font-size: 1.2rem;
         letter-spacing: 1px;
         text-align: center;
         text-transform: uppercase;
-        
+
         em {
             color: $clr-foreground-l1;
             font-style: normal;
         }
     }
-    
+
     &__subscribe {
         font-family: $font-family-sans-serif;
         margin: 5rem auto;
         max-width: 500px;
         text-align: center;
-        
+
         form {
             @include clearfix;
-            
+
             border: 2px solid $clr-primary-l4;
             display: inline-block;
             max-width: 500px;
             width: 100%;
-            
+
             .form-group {
                 border: none;
                 display: block;
                 width: 100%;
-                
+
                 @media screen and (min-width: 56 * $font-size-base) {
                     float: left;
                     width: 348px;
                 }
-                
+
                 input {
                     background: transparent;
                     border: none;
@@ -55,17 +55,17 @@
                     padding: 0 1.4rem;
                     text-align: center;
                     width: 100%;
-    
+
                     @media screen and (min-width: 56 * $font-size-base) {
                         text-align: left;
                     }
-                    
+
                     &:focus {
                         outline: none;
                     }
                 }
             }
-            
+
             button[type=submit] {
                 background: transparent;
                 border: none;
@@ -78,23 +78,24 @@
                 height: 50px;
                 text-transform: uppercase;
                 width: 100%;
-    
+
                 @media screen and (min-width: 56 * $font-size-base) {
                     border-top: none;
                     border-left: 2px solid $clr-primary-l4;
                     float: left;
                     width: 148px;
                 }
-    
+
                 &:focus {
                     outline: none;
                 }
             }
         }
-        
+
         &-message {
             color: $clr-foreground-l0;
             font-size: 1.8rem;
+            font-weight: 300;
             text-align: center;
         }
     }

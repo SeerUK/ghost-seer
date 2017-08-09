@@ -1,31 +1,33 @@
 .gs-articles {
     max-width: 66rem;
     margin: 0 auto;
-    
+
     &__item {
         border-bottom: 1px solid $clr-foreground-l4;
         margin: 0 3rem 5rem;
         padding: 0 0 5rem;
-        
+
         &:last-child {
             border-bottom: none;
         }
-        
+
         &-title {
             font-size: 2.4rem;
             margin: 2rem 0 1rem;
-            
+
             a {
                 color: $clr-primary-l4;
             }
         }
-        
+
         &-meta {
             color: $clr-foreground-l3;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
             margin: 0 0 3rem;
+            text-transform: uppercase;
         }
-        
+
         &-excerpt {
             font-family: $font-family-serif;
             font-weight: 300;
@@ -33,7 +35,7 @@
             margin: 3rem 0 0;
         }
     }
-    
+
     &__zero {
         margin: 5rem 0;
         text-align: center;
