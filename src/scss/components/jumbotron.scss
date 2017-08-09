@@ -1,0 +1,9 @@
+.gs-jumbotron {
+    background: $clr-background-l2;
+
+    &__wrapper {
+        max-width: 66rem;
+        margin: 0 auto;
+        padding: 10rem 3rem;
+    }
+}
