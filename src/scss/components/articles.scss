@@ -1,6 +1,6 @@
 .gs-articles {
     max-width: 66rem;
-    margin: 0 auto;
+    margin: 10rem auto 10rem;
 
     &__item {
         border-bottom: 1px solid $clr-foreground-l4;
@@ -9,6 +9,7 @@
 
         &:last-child {
             border-bottom: none;
+            padding-bottom: 0;
         }
 
         &-title {

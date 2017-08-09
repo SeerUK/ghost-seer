@@ -1,0 +1,23 @@
+.gs-post-image {
+    margin: 0 auto 5rem;
+    max-width: 100%;
+    width: 100%;
+    
+    img {
+        height: auto;
+        width: 100%;
+    }
+    
+    @media screen and (min-width: 90 * $font-size-base) {
+        width: 900px;
+        
+        img {
+            border-radius: 3px;
+        }
+    }
+    
+    @media screen and (min-width: 102 * $font-size-base) {
+        padding: 0 6rem;
+        width: 100%;
+    }
+}
