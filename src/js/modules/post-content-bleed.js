@@ -24,8 +24,6 @@ function mutateTask() {
 
     var mutator;
 
-    console.log("hello", width);
-
     if (width.viewport >= 900) {
         mutator = function(element) {
             element.style.removeProperty("max-width");
