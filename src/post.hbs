@@ -33,16 +33,6 @@
         </article>
     </main>
 
-    {{#prev_post}}
-
-        <div class="gs-post-navigation gs-post-navigation__prev">
-            <a href="{{url}}">
-                Previous article
-            </a>
-        </div>
-
-    {{/prev_post}}
-
     {{#next_post}}
 
         <div class="gs-post-navigation gs-post-navigation__next">
@@ -52,6 +42,16 @@
         </div>
 
     {{/next_post}}
+
+    {{#prev_post}}
+
+        <div class="gs-post-navigation gs-post-navigation__prev">
+            <a href="{{url}}">
+                Previous article
+            </a>
+        </div>
+
+    {{/prev_post}}
 
     {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="2" order="published_at desc" as |related_posts|}}
         {{#if related_posts}}

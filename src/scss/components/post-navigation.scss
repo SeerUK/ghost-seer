@@ -1,18 +1,18 @@
 .gs-post-navigation {
     // @todo: Change style, instead of hiding. Maybe show at bottom of page instead?
     display: none;
-    
+
     @media screen and (min-width: 102 * $font-size-base) {
         display: block;
     }
-    
+
     &__next,
     &__prev {
         position: fixed;
         width: 100vh;
         text-align: center;
         top: -6rem;
-        
+
         a {
             color: $clr-foreground-l1;
             display: inline-block;
@@ -25,16 +25,16 @@
             width: 100vh;
         }
     }
-    
+
     &__next {
-        transform: rotate(-90deg);
-        transform-origin: bottom right;
-        right: 0
-    }
-    
-    &__prev {
         transform: rotate(-270deg);
         transform-origin: bottom left;
         left: 0;
+    }
+
+    &__prev {
+        transform: rotate(-90deg);
+        transform-origin: bottom right;
+        right: 0
     }
 }
