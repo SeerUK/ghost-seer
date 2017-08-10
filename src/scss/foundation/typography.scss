@@ -47,13 +47,24 @@ h6 {
 
 a {
     $clr-anchor: $clr-secondary-l3;
-    
+
     color: $clr-anchor;
     text-decoration: none;
     text-decoration-color: $clr-anchor;
     text-decoration-skip: ink;
-    
+
     &:hover {
         text-decoration: underline;
     }
+}
+
+pre,
+code {
+    font-family: $font-family-mono;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+pre > code {
+    font-size: 1.4rem;
 }

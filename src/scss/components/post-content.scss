@@ -41,7 +41,7 @@
     ul,
     ol {
         padding-left: 3rem;
-        
+
         li {
             line-height: 3rem;
             margin: 0;
@@ -66,7 +66,7 @@
 
     img[src$="#full"] {
         border-radius: 0;
-        max-width: none;
+        max-width: 100vw;
         width: 100vw;
         position: relative;
         left: 50%;
@@ -99,6 +99,29 @@
     mark {
         background: linear-gradient(to bottom, transparent 50%, rgba(167, 255, 235, 0.5) 0) center center/100% 100% no-repeat;
         position: relative;
+    }
+
+    pre {
+        background: $clr-background-l2;
+        border-radius: 0;
+        max-width: 100vw;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        overflow-x: auto;
+        margin: 5rem -50vw;
+        padding: 3rem;
+
+        @media screen and (min-width: 90 * $font-size-base) {
+            border-radius: 3px;
+            left: auto;
+            margin-left: -12rem;
+            margin-right: -12rem;
+            max-width: 900px;
+            right: auto;
+            width: auto;
+        }
     }
 
     .footnotes {
