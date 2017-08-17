@@ -124,6 +124,16 @@
         }
     }
 
+    code {
+        color: $clr-primary-l3;
+    }
+
+    pre {
+        code {
+            color: inherit;
+        }
+    }
+
     .footnotes {
         margin: 3rem 0;
     }
