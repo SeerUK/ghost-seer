@@ -125,11 +125,15 @@
     }
 
     code {
+        background: $clr-background-l2;
+        border-radius: 3px;
         color: $clr-foreground-l0;
+        padding: 0 0.5rem 0.2rem;
     }
 
     pre {
         code {
+            background: inherit;
             color: inherit;
         }
     }
