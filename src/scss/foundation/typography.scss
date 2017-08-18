@@ -16,7 +16,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: $clr-primary-l4;
+    color: $clr-foreground-l0;
     font-weight: 400;
     margin: 0;
 }
@@ -46,7 +46,7 @@ h6 {
 }
 
 a {
-    $clr-anchor: $clr-secondary-l3;
+    $clr-anchor: $clr-primary-l4;
 
     color: $clr-anchor;
     text-decoration: none;

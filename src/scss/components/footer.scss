@@ -29,7 +29,7 @@
         form {
             @include clearfix;
 
-            border: 2px solid $clr-primary-l4;
+            border: 2px solid $clr-foreground-l0;
             display: inline-block;
             max-width: 500px;
             width: 100%;
@@ -47,7 +47,7 @@
                 input {
                     background: transparent;
                     border: none;
-                    color: $clr-primary-l4;
+                    color: $clr-foreground-l0;
                     display: inline-block;
                     font-family: $font-family-sans-serif;
                     height: 50px;
@@ -69,8 +69,8 @@
             button[type=submit] {
                 background: transparent;
                 border: none;
-                border-top: 2px solid $clr-primary-l4;
-                color: $clr-primary-l4;
+                border-top: 2px solid $clr-foreground-l0;
+                color: $clr-foreground-l0;
                 cursor: pointer;
                 display: block;
                 font-family: $font-family-sans-serif;
@@ -81,7 +81,7 @@
 
                 @media screen and (min-width: 56 * $font-size-base) {
                     border-top: none;
-                    border-left: 2px solid $clr-primary-l4;
+                    border-left: 2px solid $clr-foreground-l0;
                     float: left;
                     width: 148px;
                 }

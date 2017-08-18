@@ -1,0 +1,7 @@
+version: "3"
+
+services:
+  ghost:
+    environment:
+    - GHOST_UID=1000
+    - GHOST_GID=1000
