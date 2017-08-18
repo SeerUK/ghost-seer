@@ -8,6 +8,10 @@
         width: 100%;
     }
 
+    @media screen and (min-width: 768px) {
+        margin: 0 auto 10rem;
+    }
+
     @media screen and (min-width: 90 * $font-size-base) {
         width: 900px;
 
