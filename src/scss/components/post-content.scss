@@ -53,8 +53,10 @@
             p {
                 margin: 0;
                 padding: 0 0 3rem;
+            }
 
-                &:last-child {
+            &:last-child {
+                p {
                     padding: 0;
                 }
             }
