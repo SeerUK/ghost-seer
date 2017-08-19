@@ -4,12 +4,6 @@
 
 {{#post}}
 
-    {{!-- <div class="gs-post-bar">
-        <div class="gs-post-bar__wrapper">
-            {{title}}
-        </div>
-    </div> --}}
-
     <main class="gs-post {{post_class}}">
         <header class="gs-post-header">
             <h1 class="gs-post-header__title">
@@ -37,7 +31,7 @@
 
         <div class="gs-post-navigation gs-post-navigation__next">
             <a href="{{url}}">
-                Next article
+                Next post
             </a>
         </div>
 
@@ -47,11 +41,38 @@
 
         <div class="gs-post-navigation gs-post-navigation__prev">
             <a href="{{url}}">
-                Previous article
+                Prev post
             </a>
         </div>
 
     {{/prev_post}}
+
+    <nav class="gs-pagination gs-post-navigation__pagination">
+        <div class="gs-pagination__wrapper">
+
+            {{#next_post}}
+
+                <a class="gs-pagination__next" href="{{url}}">
+                    <div class="gs-pagination__label">Next</div>
+                </a>
+
+            {{/next_post}}
+
+            <span class="gs-pagination__page-number">
+                More posts
+            </span>
+
+            {{#prev_post}}
+
+                <a class="gs-pagination__prev" href="{{url}}">
+                    <div class="gs-pagination__label">Prev</div>
+                </a>
+
+            {{/prev_post}}
+
+        </div>
+    </nav>
+
 
     {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="2" order="published_at desc" as |related_posts|}}
         {{#if related_posts}}
@@ -59,7 +80,7 @@
             <section class="gs-related">
                 <div class="gs-related__wrapper">
                     <div class="gs-related__title">
-                        More in
+                        More posts in
                         <a href="{{@blog.url}}/tag/{{../primary_tag.slug}}/">
                             {{../primary_tag.name}}
                         </a>

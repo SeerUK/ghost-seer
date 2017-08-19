@@ -4,11 +4,13 @@
             <div class="gs-articles__zero">
                 {{author.name}} hasn't written any articles.
             </div>
-        {{/if}}
-
-        {{#if tag}}
+        {{else if tag}}
             <div class="gs-articles__zero">
                 No articles tagged with {{tag.name}}.
+            </div>
+        {{else}}
+            <div class="gs-articles__zero">
+                No articles to show.
             </div>
         {{/if}}
     {{/unless}}

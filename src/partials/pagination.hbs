@@ -6,7 +6,9 @@
             </a>
         {{/if}}
 
-        <span class="gs-pagination__page-number">Page {{page}} of {{pages}}</span>
+        <span class="gs-pagination__page-number">
+            <span class="gs-pagination__page-number-label">Page</span> {{page}} of {{pages}}
+        </span>
 
         {{#if next}}
             <a class="gs-pagination__prev" href="{{page_url next}}">

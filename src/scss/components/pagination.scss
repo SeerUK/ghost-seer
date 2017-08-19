@@ -4,21 +4,41 @@
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
-    
+
     &__wrapper {
         max-width: 66rem;
         margin: 5rem auto;
         padding: 0 3rem;
         position: relative;
     }
-    
+
+    &__page-number {
+        &-label {
+            display: none;
+
+            @media screen and (min-width: 40 * $font-size-base) {
+                display: inline;
+            }
+        }
+    }
+
+    &__next,
+    &__prev {
+        padding: 1rem 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25%;
+    }
+
     &__next {
+        text-align: left;
         position: absolute;
         left: 3rem;
     }
-    
+
     &__prev {
         position: absolute;
         right: 3rem;
+        text-align: right;
     }
 }
