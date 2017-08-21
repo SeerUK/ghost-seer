@@ -18,13 +18,13 @@
             </div>
         </header>
 
-        {{#feature_image}}
+        {{#if feature_image}}
 
             <section class="gs-post-image">
                 <img src="{{img_url feature_image}}" alt="{{title}}">
             </section>
 
-        {{/feature_image}}
+        {{/if}}
 
         <article class="gs-post-content">
             {{content}}
