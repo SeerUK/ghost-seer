@@ -1,14 +1,20 @@
 .gs-author {
     max-width: 66rem;
-    margin: 0 auto;
-    padding: 10rem 3rem;
-    text-align: center;
+    margin: 10rem auto;
+    padding: 0 3rem;
 
     &__name {
-        font-size: 5rem;
+        font-size: 4rem;
+        text-align: center;
 
-        @media screen and (min-width: 42 * $font-size-base) {
+        @media screen and (min-width: 40 * $font-size-base) {
+            font-size: 5rem;
+            text-align: center;
+        }
+
+        @media screen and (min-width: 60 * $font-size-base) {
             font-size: 6rem;
+            text-align: center;
         }
     }
 
@@ -17,16 +23,20 @@
         font-size: 1.2rem;
         letter-spacing: 1px;
         margin-top: 1.7rem;
+        text-align: center;
         text-transform: uppercase;
     }
 
     &__bio {
         max-width: 66rem;
-        margin: 0 auto 10rem;
-        padding: 0 3rem;
+        margin: 1.7rem auto 10rem;
         font-size: 2rem;
         font-weight: 300;
         line-height: 3rem;
-        text-align: justify;
+        text-align: center;
+
+        @media screen and (min-width: 60 * $font-size-base) {
+            text-align: justify;
+        }
     }
 }

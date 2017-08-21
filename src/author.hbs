@@ -11,23 +11,25 @@
             {{name}}
         </h1>
 
-        <div class="gs-author__location">
-            {{location}}
+        {{#if location}}
+            <div class="gs-author__location">
+                {{location}}
 
-            {{#if website}}
-                &bullet;
-                <a href="{{website}}">
-                    Website
-                </a>
-            {{/if}}
-        </div>
+                {{#if website}}
+                    &bullet;
+                    <a href="{{website}}">
+                        Website
+                    </a>
+                {{/if}}
+            </div>
+        {{/if}}
+
+        {{#if bio}}
+            <div class="gs-author__bio">
+                {{bio}}
+            </div>
+        {{/if}}
     </header>
-
-    {{#if bio}}
-        <div class="gs-author__bio">
-            {{bio}}
-        </div>
-    {{/if}}
 
 {{/author}}
 

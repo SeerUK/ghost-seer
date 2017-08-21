@@ -9,9 +9,11 @@
 
     &__title {
         font-size: 5rem;
+        text-align: center;
 
         @media screen and (min-width: 42 * $font-size-base) {
             font-size: 6rem;
+            text-align: left;
         }
     }
 
@@ -20,5 +22,14 @@
         font-weight: 300;
         line-height: 3rem;
         margin: 1.7rem 0 0;
+        text-align: center;
+
+        @media screen and (min-width: 42 * $font-size-base) {
+            text-align: left;
+        }
+
+        @media screen and (min-width: 60 * $font-size-base) {
+            text-align: justify;
+        }
     }
 }

@@ -1,5 +1,9 @@
 html {
-    font-size: $font-size-base;
+    font-size: $font-size-initial;
+
+    @media screen and (min-width: 351px) {
+        font-size: $font-size-base;
+    }
 }
 
 body {
