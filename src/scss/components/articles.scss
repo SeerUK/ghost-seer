@@ -46,10 +46,6 @@
         font-weight: 300;
         margin: 5rem 0;
         padding: 0 3rem;
-        text-align: left;
-
-        @media screen and (min-width: 60 * $font-size-base) {
-            text-align: center;
-        }
+        text-align: center;
     }
 }
