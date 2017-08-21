@@ -5,30 +5,30 @@
 {{#author}}
 
     <header class="gs-author">
-        {{!-- <p>{{feature_image}}</p> --}}
+        <div class="gs-author__wrapper">
+            <h1 class="gs-author__name">
+                Posts by {{name}}
+            </h1>
 
-        <h1 class="gs-author__name">
-            {{name}}
-        </h1>
+            {{#if location}}
+                <div class="gs-author__location">
+                    {{location}}
 
-        {{#if location}}
-            <div class="gs-author__location">
-                {{location}}
+                    {{#if website}}
+                        &bullet;
+                        <a href="{{website}}">
+                            Website
+                        </a>
+                    {{/if}}
+                </div>
+            {{/if}}
 
-                {{#if website}}
-                    &bullet;
-                    <a href="{{website}}">
-                        Website
-                    </a>
-                {{/if}}
-            </div>
-        {{/if}}
-
-        {{#if bio}}
-            <div class="gs-author__bio">
-                {{bio}}
-            </div>
-        {{/if}}
+            {{#if bio}}
+                <div class="gs-author__bio">
+                    {{bio}}
+                </div>
+            {{/if}}
+        </div>
     </header>
 
 {{/author}}

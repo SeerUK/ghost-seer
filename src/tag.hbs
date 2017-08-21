@@ -5,15 +5,17 @@
 {{#tag}}
 
     <header class="gs-tag">
-        <h1 class="gs-tag__title">
-            {{name}}
-        </h1>
+        <div class="gs-tag__wrapper">
+            <h1 class="gs-tag__title">
+                Posts in '{{name}}'
+            </h1>
 
-        {{#if description}}
-            <div class="gs-tag__description">
-                {{description}}
-            </div>
-        {{/if}}
+            {{#if description}}
+                <div class="gs-tag__description">
+                    {{description}}
+                </div>
+            {{/if}}
+        </div>
     </header>
 
 {{/tag}}

@@ -2,15 +2,15 @@
     {{#unless posts}}
         {{#if author}}
             <div class="gs-articles__zero">
-                {{author.name}} hasn't written any articles.
+                {{author.name}} hasn't written any posts.
             </div>
         {{else if tag}}
             <div class="gs-articles__zero">
-                No articles tagged with {{tag.name}}.
+                No posts tagged with {{tag.name}}.
             </div>
         {{else}}
             <div class="gs-articles__zero">
-                No articles to show.
+                No posts to show.
             </div>
         {{/if}}
     {{/unless}}

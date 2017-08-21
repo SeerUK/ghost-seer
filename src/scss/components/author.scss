@@ -1,41 +1,48 @@
 .gs-author {
-    max-width: 66rem;
-    margin: 10rem auto;
-    padding: 0 3rem;
+    background: $clr-background-l2;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+
+    @media screen and (min-width: 60 * $font-size-base) {
+        padding: 10rem 3rem;
+    }
 
     &__name {
-        font-size: 4rem;
-        text-align: center;
+        font-size: 2.7rem;
+        margin: 0 auto;
+        max-width: 60rem;
+        text-align: left;
 
         @media screen and (min-width: 40 * $font-size-base) {
-            font-size: 5rem;
-            text-align: center;
+            font-size: 3rem;
         }
 
         @media screen and (min-width: 60 * $font-size-base) {
-            font-size: 6rem;
-            text-align: center;
+            font-size: 4rem;
         }
     }
 
     &__location {
+        margin: 1.7rem auto 0;
+        max-width: 60rem;
         color: $clr-foreground-l3;
         font-size: 1.2rem;
         letter-spacing: 1px;
-        margin-top: 1.7rem;
-        text-align: center;
+        text-align: left;
         text-transform: uppercase;
     }
 
     &__bio {
-        max-width: 66rem;
-        margin: 1.7rem auto 10rem;
-        font-size: 2rem;
+        max-width: 60rem;
+        margin: 1.7rem auto 0;
+        font-size: 1.8rem;
         font-weight: 300;
         line-height: 3rem;
-        text-align: center;
+        text-align: left;
 
         @media screen and (min-width: 60 * $font-size-base) {
+            line-height: 3rem;
+            font-size: 2rem;
             text-align: justify;
         }
     }
