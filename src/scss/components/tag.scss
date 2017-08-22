@@ -4,12 +4,8 @@
     &__wrapper {
         max-width: 66rem;
         margin: 0 auto;
-        padding: 5rem 3rem;
+        padding: 10rem 3rem;
         position: relative;
-
-        @media screen and (min-width: 60 * $font-size-base) {
-            padding: 10rem 3rem;
-        }
     }
 
     &__title {
