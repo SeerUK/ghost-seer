@@ -1,11 +1,17 @@
+@import "./post-navigation";
+
 .gs-post-content {
     font-family: $font-family-serif;
-    font-weight: 300;
+    font-size: 1.6rem;
     margin: 0 auto 5rem;
     max-width: 66rem;
     position: relative;
 
-    @media screen and (min-width: 768px) {
+    @include tablet {
+        margin: 0 auto 8rem;
+    }
+
+    @include desktop {
         margin: 0 auto 10rem;
     }
 
@@ -16,7 +22,6 @@
     h5,
     h6 {
         color: $clr-foreground-l0;
-        font-family: $font-family-sans-serif;
         font-weight: 400;
         margin: 0 3rem 3rem;
     }
@@ -79,13 +84,20 @@
         position: relative;
         left: 50%;
         right: 50%;
-        margin: 5rem -50vw;
+        margin: 3rem -50vw;
 
-        @media screen and (min-width: 90 * $font-size-base) {
+        @include phablet {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        // This one has to be a little custom, we take both sides of the floating navigation off of the
+        // desktop breakpoint with.
+        @media screen and (min-width: $desktop-width - ($gs-navigation-floating-size * 2)) {
             border-radius: 3px;
             left: auto;
             right: auto;
-            max-width: 900px;
+            max-width: $desktop-width - ($gs-navigation-floating-size * 2);
             margin-left: -150px;
             margin-right: -150px;
             width: auto;
@@ -118,15 +130,22 @@
         left: 50%;
         right: 50%;
         overflow-x: auto;
-        margin: 5rem -50vw;
+        margin: 3rem -50vw;
         padding: 3rem;
 
-        @media screen and (min-width: 90 * $font-size-base) {
+        @include phablet {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+        }
+
+        // This one has to be a little custom, we take both sides of the floating navigation off of the
+        // desktop breakpoint with.
+        @media screen and (min-width: $desktop-width - ($gs-navigation-floating-size * 2)) {
             border-radius: 3px;
             left: auto;
             margin-left: -12rem;
             margin-right: -12rem;
-            max-width: 900px;
+            max-width: $desktop-width - ($gs-navigation-floating-size * 2);
             right: auto;
             width: auto;
         }
@@ -143,7 +162,13 @@
         code {
             background: inherit;
             color: inherit;
+            margin: 0;
+            padding: 0;
         }
+    }
+
+    strong {
+        font-weight: 500;
     }
 
     .footnotes {

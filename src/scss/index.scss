@@ -4,6 +4,7 @@
 @import "mixins/media";
 
 @import "config/colours";
+@import "config/media";
 @import "config/variables";
 
 @import "foundation/base";
@@ -16,7 +17,6 @@
 @import "components/lead";
 @import "components/navigation";
 @import "components/pagination";
-@import "components/post-bar";
 @import "components/post-content";
 @import "components/post-header";
 @import "components/post-image";

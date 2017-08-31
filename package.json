@@ -35,6 +35,7 @@
   "dependencies": {
     "bourbon": "^4.3.4",
     "logdown": "^3.1.0",
+    "mq-genie": "^1.0.0",
     "node-sass": "^4.5.3",
     "normalize-scss": "^7.0.0"
   }

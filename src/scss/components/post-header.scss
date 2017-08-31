@@ -1,8 +1,13 @@
 .gs-post-header {
     max-width: 76rem;
     margin: 0 auto;
-    padding: 10rem 3rem;
+    padding: 8rem 3rem;
     text-align: center;
+
+    @include tablet {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+    }
 
     &__title {
         font-size: 5rem;
@@ -15,7 +20,7 @@
     &__meta {
         color: $clr-foreground-l3;
         font-size: 1.2rem;
-        letter-spacing: 1px;
+        font-weight: 500;
         margin: 1.7rem 0 0;
         text-transform: uppercase;
     }

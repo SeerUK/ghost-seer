@@ -1,7 +1,7 @@
 html {
     font-size: $font-size-initial;
 
-    @media screen and (min-width: 351px) {
+    @include mobile-up {
         font-size: $font-size-base;
     }
 }
@@ -21,6 +21,7 @@ h4,
 h5,
 h6 {
     color: $clr-foreground-l0;
+    font-family: $font-family-title;
     font-weight: 400;
     margin: 0;
 }

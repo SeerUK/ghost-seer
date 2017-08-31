@@ -2297,6 +2297,10 @@ mixin-object@^2.0.1:
   dependencies:
     minimist "0.0.8"
 
+mq-genie@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/mq-genie/-/mq-genie-1.0.0.tgz#68f74ccb6058a25aecaebb904433684dc3a91f6d"
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
