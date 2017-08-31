@@ -97,10 +97,9 @@
             border-radius: 3px;
             left: auto;
             right: auto;
-            max-width: $desktop-width - ($gs-navigation-floating-size * 2);
             margin-left: -150px;
             margin-right: -150px;
-            width: auto;
+            width: $desktop-width - ($gs-navigation-floating-size * 2);
         }
     }
 
@@ -145,9 +144,8 @@
             left: auto;
             margin-left: -12rem;
             margin-right: -12rem;
-            max-width: $desktop-width - ($gs-navigation-floating-size * 2);
             right: auto;
-            width: auto;
+            width: $desktop-width - ($gs-navigation-floating-size * 2);
         }
     }
 

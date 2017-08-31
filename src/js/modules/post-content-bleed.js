@@ -24,7 +24,7 @@ function mutateTask() {
 
     var mutator;
 
-    if (width.viewport >= 900) {
+    if (width.viewport >= (904 + window.mqGenie.width)) {
         mutator = function(element) {
             element.style.removeProperty("max-width");
             element.style.removeProperty("margin-left");
