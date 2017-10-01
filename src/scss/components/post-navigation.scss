@@ -15,10 +15,11 @@ $gs-navigation-floating-size: 60px;
         top: -#{$gs-navigation-floating-size};
 
         a {
+            @include gs-type-meta;
+
             color: $clr-foreground-l1;
             display: inline-block;
             font-size: 1.2rem;
-            font-weight: 500;
             line-height: $gs-navigation-floating-size;
             text-align: center;
             text-transform: uppercase;

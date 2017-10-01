@@ -2,6 +2,7 @@
 @import "~normalize-scss/sass/normalize/import-now";
 
 @import "mixins/media";
+@import "mixins/typography";
 
 @import "config/colours";
 @import "config/media";
@@ -14,7 +15,6 @@
 @import "components/author";
 @import "components/footer";
 @import "components/jumbotron";
-@import "components/lead";
 @import "components/navigation";
 @import "components/pagination";
 @import "components/post-content";

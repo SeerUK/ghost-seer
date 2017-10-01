@@ -1,7 +1,7 @@
 @import "./post-navigation";
 
 .gs-post-content {
-    font-family: $font-family-serif;
+    font-family: $font-family-sans-serif;
     font-size: 1.6rem;
     margin: 0 auto 5rem;
     max-width: 66rem;
@@ -153,7 +153,7 @@
         background: $clr-background-l3;
         border-radius: 3px;
         color: $clr-foreground-l0;
-        padding: 0 0.5rem 0.2rem;
+        padding: 0.2rem 0.5rem;
     }
 
     pre {

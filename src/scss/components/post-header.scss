@@ -18,9 +18,10 @@
     }
 
     &__meta {
+        @include gs-type-meta;
+
         color: $clr-foreground-l3;
         font-size: 1.2rem;
-        font-weight: 500;
         margin: 1.7rem 0 0;
         text-transform: uppercase;
     }

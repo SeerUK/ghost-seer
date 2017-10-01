@@ -1,7 +1,8 @@
 .gs-pagination {
+    @include gs-type-meta;
+
     border-top: 1px solid $clr-foreground-l4;
     font-size: 1.2rem;
-    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
 
