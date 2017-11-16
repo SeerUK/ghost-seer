@@ -5,16 +5,13 @@
     max-width: 100%;
     width: 100%;
 
-    @include phablet {
+    // Slight hack to make this a bit smoother.
+    @media screen and (min-width: 70 * $font-size-base) {
         margin: 0 auto 5rem;
     }
 
-    @include tablet {
+    @include tablet-up {
         margin: 0 auto 8rem;
-    }
-
-    @include desktop {
-        margin: 0 auto 10rem;
     }
 
     img {

@@ -2,83 +2,49 @@
     max-width: 66rem;
     margin: 3rem auto;
 
-    @include tablet {
+    @media screen and (min-width: 70 * $font-size-base) {
+        margin: 5rem auto;
+    }
+
+    @include tablet-up {
         margin: 8rem auto;
     }
 
-    @include desktop {
-        margin: 10rem auto;
-    }
-
-    &-new {
-        &__item {
-            @include clearfix;
-
-            font-size: 1.8rem;
-            line-height: 2.7rem;
-            margin: 0 3rem 1rem;
-
-            a {
-                display: inline-block;
-                float: none;
-                max-width: 50rem;
-            }
-
-            time {
-                display: block;
-                color: $clr-foreground-l2;
-                font-size: 1.4rem;
-                line-height: 2.7rem;
-                margin-right: 2rem;
-
-                @include tablet {
-                    float: right;
-                    margin-left: 2rem;
-                    margin-right: 0;
-                }
-
-                @include desktop {
-                    float: right;
-                    margin-left: 2rem;
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-
     &__item {
-        border-bottom: 1px solid $clr-foreground-l4;
-        margin: 0 3rem 5rem;
-        padding: 0 0 5rem;
+        @include clearfix;
 
-        &:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        margin: 0 3rem 2rem;
+
+        @include tablet-up {
+            margin: 0 3rem 1rem;
         }
 
-        &-title {
-            font-family: $font-family-title;
-            font-size: 2.6rem;
-            line-height: 3.5rem;
-            margin: 2rem 0 1rem;
-
-            a {
-                color: $clr-foreground-l0;
-            }
+        a {
+            display: inline-block;
+            float: none;
+            max-width: 50rem;
         }
 
-        &-meta {
-            @include gs-type-meta;
-
-            color: $clr-foreground-l3;
-            margin: 0 0 3rem;
-        }
-
-        &-excerpt {
-            font-family: $font-family-sans-serif;
-            font-size: 1.8rem;
+        time {
+            display: block;
+            color: $clr-foreground-l2;
+            font-size: 1.4rem;
             line-height: 2.7rem;
-            margin: 3rem 0 0;
+            margin-right: 2rem;
+
+            @include tablet {
+                float: right;
+                margin-left: 2rem;
+                margin-right: 0;
+            }
+
+            @include desktop {
+                float: right;
+                margin-left: 2rem;
+                margin-right: 0;
+            }
         }
     }
 

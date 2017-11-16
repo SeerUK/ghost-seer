@@ -24,7 +24,7 @@
     }
 
     &__location {
-        @include gs-type-meta;
+        @include gs-type-subdued;
 
         color: $clr-foreground-l3;
         margin: 1.7rem auto 0;

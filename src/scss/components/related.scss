@@ -3,41 +3,58 @@
 
     &__wrapper {
         max-width: 66rem;
-        margin: 5rem auto;
+        margin: 3rem auto 3rem;
         padding: 0 3rem;
-        text-align: center;
-    }
 
-    &__title {
-        @include gs-type-meta;
-    }
-
-    &__posts {
-        margin: 5rem 0;
-        padding: 0;
-    }
-
-    &__post {
-        list-style: none;
-        margin: 0 0 5rem;
-        padding: 0;
-
-        &-title {
-            font-family: $font-family-title;
-            font-size: 2.4rem;
-            margin: 0 0 1rem;
-
-            &,
-            a {
-                color: $clr-foreground-l0;
-            }
+        @include tablet-up {
+            margin: 5rem auto;
         }
 
-        &-date {
-            @include gs-type-meta;
+        @media screen and (min-width: 70 * $font-size-base) {
+            margin: 5rem auto;
+        }
 
-            color: $clr-foreground-l3;
-            margin: 0 0 3rem;
+        @include tablet-up {
+            margin: 8rem auto;
+        }
+    }
+
+    &__item {
+        @include clearfix;
+
+        font-size: 1.8rem;
+        line-height: 2.7rem;
+        margin: 0 0 2rem;
+        text-align: left;
+
+        @include tablet-up {
+            margin: 0 0 1rem;
+        }
+
+        a {
+            display: inline-block;
+            float: none;
+            max-width: 50rem;
+        }
+
+        time {
+            display: block;
+            color: $clr-foreground-l2;
+            font-size: 1.4rem;
+            line-height: 2.7rem;
+            margin-right: 2rem;
+
+            @include tablet {
+                float: right;
+                margin-left: 2rem;
+                margin-right: 0;
+            }
+
+            @include desktop {
+                float: right;
+                margin-left: 2rem;
+                margin-right: 0;
+            }
         }
     }
 }

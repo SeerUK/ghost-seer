@@ -15,7 +15,7 @@ $gs-navigation-floating-size: 60px;
         top: -#{$gs-navigation-floating-size};
 
         a {
-            @include gs-type-meta;
+            @include gs-type-subdued;
 
             color: $clr-foreground-l1;
             display: inline-block;
@@ -36,13 +36,5 @@ $gs-navigation-floating-size: 60px;
         transform: rotate(-90deg);
         transform-origin: bottom right;
         right: 0
-    }
-
-    &__pagination {
-        display: block;
-
-        @include desktop {
-            display: none;
-        }
     }
 }

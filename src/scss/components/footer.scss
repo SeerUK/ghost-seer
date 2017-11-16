@@ -8,15 +8,13 @@
     }
 
     &__copyright {
-        color: $clr-foreground-l3;
-        font-family: $font-family-grotesque;
-        font-size: 1.2rem;
-        font-weight: 600;
+        @include gs-type-subdued;
+
+        color: $clr-foreground-l2;
         text-align: center;
-        text-transform: uppercase;
 
         em {
-            color: $clr-foreground-l1;
+            color: $clr-foreground-l0;
             font-style: normal;
         }
     }
@@ -100,10 +98,10 @@
         }
 
         &-message {
+            @include gs-type-paragraph;
+
             color: $clr-foreground-l0;
-            font-size: 1.6rem;
-            line-height: 2.4rem;
-            padding: 0 10%;
+            padding: 0 3rem;
             text-align: center;
         }
     }

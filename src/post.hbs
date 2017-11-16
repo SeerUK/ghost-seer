@@ -9,11 +9,6 @@
             <h1 class="gs-post-header__title">
                 {{title}}
             </h1>
-            {{!--
-            <h1 class="gs-post-header__title">
-                Passionate Designer Born and raised in Venice who loves minimalism
-            </h1>
-            --}}
 
             <div class="gs-post-header__meta">
                 <time datetime="{{date format="YYYY-MM-DD"}}">
@@ -58,64 +53,28 @@
 
     {{/prev_post}}
 
-    <nav class="gs-pagination gs-post-navigation__pagination">
-        <div class="gs-pagination__wrapper">
-
-            {{#next_post}}
-
-                <a class="gs-pagination__next" href="{{url}}">
-                    <div class="gs-pagination__label">Next</div>
-                </a>
-
-            {{/next_post}}
-
-            <span class="gs-pagination__page-number">
-                More posts
-            </span>
-
-            {{#prev_post}}
-
-                <a class="gs-pagination__prev" href="{{url}}">
-                    <div class="gs-pagination__label">Prev</div>
-                </a>
-
-            {{/prev_post}}
-
-        </div>
-    </nav>
-
-
-    {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="2" order="published_at desc" as |related_posts|}}
+    {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="5" order="published_at desc" as |related_posts|}}
         {{#if related_posts}}
 
             <section class="gs-related">
                 <div class="gs-related__wrapper">
-                    <div class="gs-related__title">
+                    <h4>
                         More posts in
                         <a href="{{@blog.url}}/tag/{{../primary_tag.slug}}/">
                             {{../primary_tag.name}}
                         </a>
-                    </div>
+                    </h4>
 
-                    <ul class="gs-related__posts">
+                    {{#foreach related_posts}}
 
-                        {{#foreach related_posts}}
+                        <article class="gs-related__item {{post_class}}">
+                            <a href="{{url}}">{{title}}</a>
+                            <time datetime="{{date format="YYYY-MM-DD"}}">
+                                {{date format="DD MMM, YYYY"}}
+                            </time>
+                        </article>
 
-                            <li class="gs-related__post">
-                                <div class="gs-related__post-title">
-                                    <a href="{{url}}">
-                                        {{title}}
-                                    </a>
-                                </div>
-
-                                <div class="gs-related__post-date">
-                                    on {{date format="DD MMMM, YYYY"}}
-                                </div>
-                            </li>
-
-                        {{/foreach}}
-
-                    </ul>
+                    {{/foreach}}
                 </div>
             </section>
 
