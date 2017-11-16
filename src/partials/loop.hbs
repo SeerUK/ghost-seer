@@ -16,6 +16,7 @@
     {{/unless}}
 
     {{#foreach posts}}
+        {{!--
         <article class="gs-articles__item {{post_class}}">
             <section class="gs-articles__item-post">
                 <header class="gs-articles__item-title">
@@ -34,9 +35,19 @@
                 </section>
             </section>
         </article>
+        --}}
+
+        <article class="gs-articles-new__item {{post_class}}">
+            <a href="{{url}}">{{title}}</a>
+            <time datetime="{{date format="YYYY-MM-DD"}}">
+                {{date format="DD MMM, YYYY"}}
+            </time>
+        </article>
     {{/foreach}}
 </section>
 
 {{#if pagination}}
-    {{pagination}}
+    {{#if total}}
+        {{pagination}}
+    {{/if}}
 {{/if}}

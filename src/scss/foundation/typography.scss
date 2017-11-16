@@ -23,31 +23,63 @@ h6 {
     color: $clr-foreground-l0;
     font-family: $font-family-title;
     font-weight: 400;
-    margin: 0;
+    padding: 0;
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 3rem;
+    line-height: 1.2;
+
+    @include tablet-up {
+        font-size: 4rem;
+    }
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 2.25rem;
+    line-height: 1.25;
+
+    @include tablet-up {
+        font-size: 3rem;
+    }
 }
 
 h3 {
-    font-size: 3rem;
+    font-size: 2.2rem;
+    line-height: 1.25;
+
+    @include tablet-up {
+        font-size: 2.6rem;
+    }
 }
 
 h4 {
-    font-size: 2.4rem;
+    font-size: 2rem;
+    line-height: 1.6;
+
+    @include tablet-up {
+        font-size: 2.2rem;
+    }
 }
 
 h5 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: inherit;
+
+    @include tablet-up {
+        font-size: 2rem;
+    }
 }
 
 h6 {
     font-size: 1.6rem;
+    font-weight: bold;
+    line-height: inherit;
+
+    @include tablet-up {
+        font-size: 1.8rem;
+    }
 }
 
 a {

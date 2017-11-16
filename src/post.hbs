@@ -9,12 +9,19 @@
             <h1 class="gs-post-header__title">
                 {{title}}
             </h1>
+            {{!--
+            <h1 class="gs-post-header__title">
+                Passionate Designer Born and raised in Venice who loves minimalism
+            </h1>
+            --}}
 
             <div class="gs-post-header__meta">
                 <time datetime="{{date format="YYYY-MM-DD"}}">
-                    on {{date format="DD MMMM, YYYY"}}
+                    {{date format="DD MMM, YYYY"}}
                 </time>
-                in {{tags}}
+                {{#if tags}}
+                    in {{tags}}
+                {{/if}}
             </div>
         </header>
 

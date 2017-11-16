@@ -1,14 +1,45 @@
-$gs-tablet-width: 768px;
-$gs-desktop-width: 1024px;
+@import "../config/variables";
+
+$phablet-width: 41 * $font-size-base;
+$tablet-width: 76.8 * $font-size-base;
+$desktop-width: 102.4 * $font-size-base;
+
+@mixin mobile {
+    @media screen and (max-width: #{$phablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin mobile-up {
+    @content;
+}
+
+@mixin phablet {
+    @media screen and (min-width: #{$phablet-width}) and (max-width: #{$tablet-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin phablet-up {
+    @media screen and (min-width: #{$phablet-width}) {
+        @content;
+    }
+}
 
 @mixin tablet {
-    @media (min-width: #{$gs-tablet-width}) and (max-width: #{$gs-desktop-width - 1px}) {
+    @media screen and (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @media screen and (min-width: #{$tablet-width}) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media (min-width: #{$gs-desktop-width}) {
+    @media screen and (min-width: #{$desktop-width}) {
         @content;
     }
 }

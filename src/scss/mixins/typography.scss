@@ -1,4 +1,6 @@
 @mixin gs-type-meta {
-    font-family: $font-family-title;
+    font-family: $font-family-grotesque;
     font-weight: 600;
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
