@@ -11,7 +11,7 @@ services:
     - GHOST_DB_PASS=ghost
     - GHOST_DB_NAME=ghost
     - GHOST_ENV=development
-    - GHOST_VERSION=1.15.1
+    - GHOST_VERSION=1.17.2
     # - GHOST_UID=1000
     # - GHOST_GID=1000
     links:

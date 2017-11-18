@@ -115,3 +115,11 @@ pre > code {
         font-size: 1.4rem;
     }
 }
+
+hr {
+    background: $clr-foreground-l4;
+    border: none;
+    height: 1px;
+    display: block;
+    width: 100%;
+}

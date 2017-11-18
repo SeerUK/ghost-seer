@@ -2,12 +2,18 @@
     max-width: 66rem;
     margin: 3rem auto;
 
+    // This is about the width when the content + padding will hit the sides
     @media screen and (min-width: 70 * $font-size-base) {
         margin: 5rem auto;
     }
 
     @include tablet-up {
         margin: 8rem auto;
+    }
+
+    &__title {
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 
     &__item {
