@@ -81,7 +81,7 @@
         right: 50%;
         margin: 3rem -50vw;
 
-        @include phablet-up {
+        @include tablet-up {
             margin-top: 5rem;
             margin-bottom: 5rem;
         }
@@ -130,7 +130,7 @@
         margin: 3rem -50vw;
         padding: 3rem;
 
-        @include phablet-up {
+        @include tablet-up {
             margin-top: 5rem;
             margin-bottom: 5rem;
         }
