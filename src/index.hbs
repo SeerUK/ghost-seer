@@ -7,9 +7,45 @@
         <h2 class="gs-jumbotron__description" lang="en">
             {{@blog.description}}
         </h2>
+        <div class="gs-jumbotron__bar"></div>
     </div>
 </header>
 
 {{> "loop"}}
+
+<hr>
+
+<section class="gs-cards">
+    <div class="gs-cards__wrapper">
+        <h4 class="gs-cards__title">
+            Projects
+        </h4>
+
+        <div class="gs-card-holder">
+            <div class="gs-card">
+                <a class="gs-card__title" href="https://github.com/SeerUK/tid" target="_blank">
+                    Tid
+                </a>
+                <p class="gs-card__desc">A simple, CLI-based time tracking utility for personal time tracking.</p>
+                <ul class="gs-card__tags">
+                    <li>Go</li>
+                    <li>CLI</li>
+                </ul>
+            </div>
+
+            <div class="gs-card">
+                <a class="gs-card__title" href="https://github.com/SeerUK/i3x3" target="_blank">
+                    i3x3
+                </a>
+                <p class="gs-card__desc">Grid-based workspace manager for i3, a tiling window manager for X.</p>
+                <ul class="gs-card__tags">
+                    <li>Go</li>
+                    <li>GUI</li>
+                    <li>Workflow</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
 {{> "footer"}}

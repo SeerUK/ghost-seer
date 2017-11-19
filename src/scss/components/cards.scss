@@ -1,0 +1,74 @@
+.gs-cards {
+    &__wrapper {
+        max-width: 66rem;
+        margin: 3rem auto;
+        padding: 0 3rem;
+
+        // This is about the width when the content + padding will hit the sides
+        @media screen and (min-width: 70 * $font-size-base) {
+            margin: 5rem auto;
+        }
+
+        @include tablet-up {
+            margin: 8rem auto;
+        }
+    }
+}
+
+.gs-card-holder {
+    @include tablet-up {
+        display: flex;
+    }
+}
+
+.gs-card {
+    border: 1px solid $clr-foreground-l4;
+    margin: 3rem 0;
+    padding: 3rem;
+
+    @include tablet-up {
+        margin: 0 1.5rem;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+    }
+
+    &__title {
+        @include gs-link;
+
+        display: inline-block;
+        margin: 0 0 1rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+
+        @include phablet-up {
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+        }
+    }
+
+    &__desc {
+        margin: 0;
+        line-height: 1.4;
+    }
+
+    &__tags {
+        @include clearfix;
+
+        color: $clr-foreground-l2;
+        font-size: 1.4rem;
+        list-style: none;
+        margin: 1rem 0 0;
+        padding: 0;
+
+        li {
+            float: left;
+            margin-right: 1rem;
+        }
+    }
+}

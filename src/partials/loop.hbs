@@ -15,6 +15,12 @@
         {{/if}}
     {{/unless}}
 
+    {{#if posts}}
+        <h4 class="gs-articles__title">
+            Articles
+        </h4>
+    {{/if}}
+
     {{#foreach posts}}
         <article class="gs-articles__item {{post_class}}">
             <a href="{{url}}"><!-- overlaid --></a>
