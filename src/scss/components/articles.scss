@@ -13,34 +13,42 @@
     &__item {
         @include clearfix;
 
-        font-size: 1.8rem;
-        line-height: 2.7rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
         margin: 0 3rem 2rem;
+        position: relative;
+
+        @include phablet-up {
+            font-size: 1.8rem;
+            line-height: 2.7rem;
+        }
 
         @include tablet-up {
             margin: 0 3rem 1rem;
         }
 
         a {
-            display: inline-block;
-            float: none;
-            max-width: 50rem;
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
         }
 
         time {
             display: block;
             color: $clr-foreground-l2;
-            font-size: 1.4rem;
-            line-height: 2.7rem;
+            font-size: 1.3rem;
+            line-height: 2.4rem;
             margin-right: 2rem;
 
-            @include tablet {
-                float: right;
-                margin-left: 2rem;
-                margin-right: 0;
+            @include phablet-up {
+                font-size: 1.4rem;
+                line-height: 2.7rem;
             }
 
-            @include desktop {
+            @include tablet-up {
                 float: right;
                 margin-left: 2rem;
                 margin-right: 0;

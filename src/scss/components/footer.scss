@@ -68,6 +68,7 @@
             button[type=submit] {
                 background: transparent;
                 border: none;
+                border-radius: 0;
                 border-top: 2px solid $clr-foreground-l0;
                 color: $clr-foreground-l0;
                 cursor: pointer;

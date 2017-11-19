@@ -17,7 +17,8 @@
 
     {{#foreach posts}}
         <article class="gs-articles__item {{post_class}}">
-            <a href="{{url}}">{{title}}</a>
+            <a href="{{url}}"><!-- overlaid --></a>
+            {{title}}
             <time datetime="{{date format="YYYY-MM-DD"}}">
                 {{date format="DD MMM, YYYY"}}
             </time>
