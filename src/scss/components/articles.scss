@@ -60,6 +60,15 @@
                 margin-right: 0;
             }
         }
+
+        &-title {
+            color: $clr-primary-l4;
+        }
+
+        &:hover &-title {
+            text-decoration: underline;
+            text-decoration-skip: ink;
+        }
     }
 
     &__zero {
