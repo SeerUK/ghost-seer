@@ -62,7 +62,7 @@
         }
 
         &-title {
-            color: $clr-primary-l4;
+            @include gs-link;
         }
 
         &:hover &-title {

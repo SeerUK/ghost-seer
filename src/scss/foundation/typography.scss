@@ -83,16 +83,7 @@ h6 {
 }
 
 a {
-    $clr-anchor: $clr-primary-l4;
-
-    color: $clr-anchor;
-    text-decoration: none;
-    text-decoration-color: $clr-anchor;
-    text-decoration-skip: ink;
-
-    &:hover {
-        text-decoration: underline;
-    }
+    @include gs-link;
 }
 
 pre,

@@ -14,3 +14,16 @@
     font-size: 1.2rem;
     text-transform: uppercase;
 }
+
+@mixin gs-link {
+    $clr-anchor: $clr-primary-l4;
+
+    color: $clr-anchor;
+    text-decoration: none;
+    text-decoration-color: $clr-anchor;
+    text-decoration-skip: ink;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
