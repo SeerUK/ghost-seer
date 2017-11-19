@@ -53,29 +53,29 @@
 
     {{/prev_post}}
 
+    <hr>
+
     {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="5" order="published_at desc" as |related_posts|}}
         {{#if related_posts}}
 
-            <section class="gs-related">
-                <div class="gs-related__wrapper">
-                    <h4>
-                        More posts in
-                        <a href="{{@blog.url}}/tag/{{../primary_tag.slug}}/">
-                            {{../primary_tag.name}}
-                        </a>
-                    </h4>
+            <section class="gs-articles">
+                <h4 class="gs-articles__title">
+                    More posts in
+                    <a href="{{@blog.url}}/tag/{{../primary_tag.slug}}/">
+                        {{../primary_tag.name}}
+                    </a>
+                </h4>
 
-                    {{#foreach related_posts}}
+                {{#foreach related_posts}}
 
-                        <article class="gs-related__item {{post_class}}">
-                            <a href="{{url}}">{{title}}</a>
-                            <time datetime="{{date format="YYYY-MM-DD"}}">
-                                {{date format="DD MMM, YYYY"}}
-                            </time>
-                        </article>
+                    <article class="gs-articles__item {{post_class}}">
+                        <a href="{{url}}">{{title}}</a>
+                        <time datetime="{{date format="YYYY-MM-DD"}}">
+                            {{date format="DD MMM, YYYY"}}
+                        </time>
+                    </article>
 
-                    {{/foreach}}
-                </div>
+                {{/foreach}}
             </section>
 
         {{/if}}

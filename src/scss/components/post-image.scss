@@ -15,8 +15,10 @@
     }
 
     img {
+        display: block;
         height: auto;
         width: 100%;
+        text-align: center;
     }
 
     // This one has to be a little custom, we take both sides of the floating navigation off of the
