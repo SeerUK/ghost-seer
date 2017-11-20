@@ -1,0 +1,19 @@
+.gs-about {
+    &__wrapper {
+        max-width: 66rem;
+        margin: 3rem auto;
+        padding: 0 3rem;
+
+        @include phablet-up {
+            margin: 5rem auto;
+        }
+
+        @include tablet-up {
+            margin: 8rem auto;
+        }
+    }
+
+    p {
+        @include gs-type-paragraph;
+    }
+}
