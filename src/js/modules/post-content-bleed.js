@@ -1,3 +1,5 @@
+"use strict";
+
 var width = {};
 var willMutate;
 var measure;

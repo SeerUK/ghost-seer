@@ -53,6 +53,25 @@
 
     {{/prev_post}}
 
+    <hr>
+
+    <div class="gs-comments">
+        <div class="gs-comments__wrapper">
+            <h4>Comments</h4>
+
+            <button
+                id="gs-load-comments"
+                class="gs-button"
+                data-gs-comments-url="{{url absolute='true'}}"
+                data-gs-comments-identifier="ghost-{{comment_id}}"
+            >
+                Load comments...
+            </button>
+
+            <div id="disqus_thread"></div>
+        </div>
+    </div>
+
     {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="5" order="published_at desc" as |related_posts|}}
         {{#if related_posts}}
 
