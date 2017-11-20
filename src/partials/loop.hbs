@@ -15,9 +15,18 @@
         {{/if}}
     {{/unless}}
 
+    {{#if posts}}
+        <h4 class="gs-articles__title">
+            Posts
+        </h4>
+    {{/if}}
+
     {{#foreach posts}}
         <article class="gs-articles__item {{post_class}}">
-            <a href="{{url}}">{{title}}</a>
+            <a href="{{url}}"><!-- overlaid --></a>
+            <span class="gs-articles__item-title">
+                {{title}}
+            </span>
             <time datetime="{{date format="YYYY-MM-DD"}}">
                 {{date format="DD MMM, YYYY"}}
             </time>

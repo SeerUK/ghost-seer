@@ -53,10 +53,10 @@
 
     {{/prev_post}}
 
-    <hr>
-
     {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="5" order="published_at desc" as |related_posts|}}
         {{#if related_posts}}
+
+            <hr>
 
             <section class="gs-articles">
                 <h4 class="gs-articles__title">
@@ -69,7 +69,10 @@
                 {{#foreach related_posts}}
 
                     <article class="gs-articles__item {{post_class}}">
-                        <a href="{{url}}">{{title}}</a>
+                        <a href="{{url}}"><!-- overlaid --></a>
+                        <span class="gs-articles__item-title">
+                            {{title}}
+                        </span>
                         <time datetime="{{date format="YYYY-MM-DD"}}">
                             {{date format="DD MMM, YYYY"}}
                         </time>
