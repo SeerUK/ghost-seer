@@ -4,29 +4,23 @@
 
 {{#author}}
 
-    <header class="gs-author">
-        <div class="gs-author__wrapper">
-            <h1 class="gs-author__name">
+    <header class="gs-jumbotron">
+        <div class="gs-jumbotron__wrapper">
+            <h1 class="gs-jumbotron__title">
                 Posts by {{name}}
             </h1>
 
             {{#if location}}
-                <div class="gs-author__location">
+                <h2 class="gs-jumbotron__description">
                     {{location}}
 
                     {{#if website}}
                         &bullet;
-                        <a href="{{website}}">
+                        <a href="{{website}}" target="_blank">
                             Website
                         </a>
                     {{/if}}
-                </div>
-            {{/if}}
-
-            {{#if bio}}
-                <div class="gs-author__bio">
-                    {{bio}}
-                </div>
+                </h2>
             {{/if}}
         </div>
     </header>
