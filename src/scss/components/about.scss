@@ -11,6 +11,10 @@
         @include tablet-up {
             margin: 8rem auto;
         }
+
+        @include post-tablet-up {
+            max-width: 76rem;
+        }
     }
 
     p {

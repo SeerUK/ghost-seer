@@ -2,6 +2,7 @@
 
 $phablet-width: 41 * $font-size-base;
 $tablet-width: 76.8 * $font-size-base;
+$post-tablet-width: $tablet-width + (10 * $font-size-base);
 $desktop-width: 102.4 * $font-size-base;
 
 @mixin mobile {
@@ -34,6 +35,12 @@ $desktop-width: 102.4 * $font-size-base;
 
 @mixin tablet-up {
     @media screen and (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin post-tablet-up {
+    @media screen and (min-width: #{$post-tablet-width}) {
         @content;
     }
 }

@@ -11,12 +11,14 @@
         margin: 0 auto;
         padding: 0 3rem;
         position: relative;
+
+        @include post-tablet-up {
+            max-width: 76rem;
+        }
     }
 
-    &__logo {
-        a {
-            color: $clr-foreground-l0;
-        }
+    &__logo a {
+        color: $clr-foreground-l0;
     }
 
     &__links {
@@ -36,5 +38,16 @@
             list-style: none;
             margin-left: 1rem;
         }
+    }
+}
+
+.post-template-featured {
+    .gs-navigation {
+        background: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
     }
 }

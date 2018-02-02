@@ -1,5 +1,7 @@
 .gs-jumbotron {
     background: $clr-background-l2;
+    overflow: hidden;
+    position: relative;
 
     &__wrapper {
         max-width: 66rem;
@@ -13,6 +15,10 @@
 
         @media screen and (min-width: 60 * $font-size-base) {
             padding: 10rem 3rem;
+        }
+
+        @include post-tablet-up {
+            max-width: 76rem;
         }
     }
 
@@ -44,6 +50,8 @@
         line-height: 1.5;
         margin: 0;
         text-align: left;
+        position: relative;
+        z-index: 2;
 
         @include phablet-up {
             font-size: 2.2rem;
@@ -51,6 +59,9 @@
 
         @include tablet-up {
             font-size: 2.7rem;
+            //padding-right: 30rem;
+            //padding-left: 10rem;
+            padding-right: 10rem;
         }
     }
 

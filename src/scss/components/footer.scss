@@ -1,10 +1,20 @@
 .gs-footer {
     background: $clr-background-l2;
+    position: relative;
+    z-index: 2;
 
     &__wrapper {
         max-width: 66rem;
         margin: 0 auto;
         padding: 5rem 3rem;
+
+        @include post-tablet-up {
+            max-width: 76rem;
+        }
+
+        @include desktop {
+            padding: 8rem 3rem;
+        }
     }
 
     &__copyright {

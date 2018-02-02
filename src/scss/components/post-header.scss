@@ -1,18 +1,141 @@
 .gs-post-header {
-    max-width: 96rem;
-    margin: 0 auto;
-    padding: 8rem 3rem;
-    text-align: center;
+    position: relative;
+
+    &--no-cover {
+        margin: 0 auto;
+        max-width: 66rem;
+        padding: 5rem 3rem 0;
+        text-align: left;
+
+        @include phablet-up {
+            padding: 8rem 3rem 0;
+        }
+
+        @include post-tablet-up {
+            max-width: 76rem;
+        }
+    }
+
+    &--cover {
+        margin: 0 auto;
+        padding: 0 3rem;
+        text-align: center;
+        height: 100vh;
+        max-height: 144rem;
+        overflow: hidden;
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-position: center center;
+        background-size: cover;
+        opacity: 0.1;
+    }
+
+    &__wrapper {
+        backface-visibility: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+
+    }
 
     &__title {
+        font-family: $font-family-article-title;
+        font-weight: 600;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        position: relative;
+        z-index: 2;
+        font-size: 2.75rem;
+
+        @include phablet-up {
+            font-size: 3rem;
+        }
+
+        @include tablet-up {
+            font-size: 4.8rem;
+        }
+
         @include desktop {
-            font-size: 5rem;
+            font-size: 4.8rem;
+        }
+    }
+
+    &--cover &__title {
+        margin: 0 auto;
+        max-width: 66rem;
+        padding: 0 3rem;
+
+        @include post-tablet-up {
+            max-width: 76rem;
         }
     }
 
     &__meta {
+        @include clearfix;
+
         color: $clr-foreground-l2;
         font-size: 1.4rem;
+        line-height: 1.7;
         margin: 1.7rem 0 0;
+        max-width: 66rem;
+        position: relative;
+        z-index: 2;
+
+        @include post-tablet-up {
+            max-width: 76rem;
+        }
+
+        &-author,
+        &-tags,
+        &-date,
+        &-reading-time {
+            display: inline-block;
+            text-transform: capitalize;
+            white-space: nowrap;
+        }
+
+        &-author,
+        &-tags,
+        &-date {
+            margin-right: 2rem;
+            position: relative;
+
+            &::after {
+                content: "/";
+                position: absolute;
+                right: -1.3rem;
+                top: 0;
+                bottom: 0;
+            }
+        }
+    }
+
+    &--cover &__meta {
+        color: $clr-foreground-l0;
+        padding: 0 3rem;
+    }
+
+    &--cover &__meta {
+        margin: 1.7rem auto 0;
+        text-align: center;
+    }
+
+    &__letter {
+        color: $clr-background-l2;
+        font-family: $font-family-article-title;
+        position: absolute;
+        top: 50%;
+        left: -5rem;
+        font-size: 25rem;
+        transform: translateY(-35%);
+        z-index: 0;
     }
 }

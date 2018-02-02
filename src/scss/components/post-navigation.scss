@@ -13,6 +13,7 @@ $gs-navigation-floating-size: 60px;
         width: 100vh;
         text-align: center;
         top: -#{$gs-navigation-floating-size};
+        z-index: 2;
 
         a {
             @include gs-type-subdued;

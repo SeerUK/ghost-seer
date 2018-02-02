@@ -4,104 +4,148 @@
 
 {{#post}}
 
-    <main class="gs-post {{post_class}}">
-        <header class="gs-post-header">
+    {{#if feature_image}}
+
+        <header class="gs-post-header gs-post-header--cover">
+            <div class="gs-post-header__image" style="background-image: url('{{img_url feature_image}}')"></div>
+
+            <div class="gs-post-header__wrapper">
+                <h1 class="gs-post-header__title">
+                    {{title}}
+                </h1>
+
+                <div class="gs-post-header__meta">
+                    <div class="gs-post-header__meta-author">
+                        By {{author}}
+                    </div>
+                    {{#if tags}}
+                        <div class="gs-post-header__meta-tags">
+                            In {{tags}}
+                        </div>
+                    {{/if}}
+                    <div class="gs-post-header__meta-date">
+                        <time datetime="{{date format="YYYY-MM-DD"}}">
+                            {{date format="DD MMM, YYYY"}}
+                        </time>
+                    </div>
+                    <div class="gs-post-header__meta-reading-time">
+                        {{reading_time}}
+                    </div>
+                </div>
+            </div>
+        </header>
+
+    {{/if}}
+
+    {{#unless feature_image}}
+
+        <header class="gs-post-header gs-post-header--no-cover">
+            <div class="gs-post-header__letter">
+                {{title.[0]}}
+            </div>
+
             <h1 class="gs-post-header__title">
                 {{title}}
             </h1>
 
             <div class="gs-post-header__meta">
-                <time datetime="{{date format="YYYY-MM-DD"}}">
-                    {{date format="DD MMM, YYYY"}}
-                </time>
+                <div class="gs-post-header__meta-author">
+                    By {{author}}
+                </div>
                 {{#if tags}}
-                    in {{tags}}
+                    <div class="gs-post-header__meta-tags">
+                        In {{tags}}
+                    </div>
                 {{/if}}
+                <div class="gs-post-header__meta-date">
+                    <time datetime="{{date format="YYYY-MM-DD"}}">
+                        {{date format="DD MMM, YYYY"}}
+                    </time>
+                </div>
+                <div class="gs-post-header__meta-reading-time">
+                    {{reading_time}}
+                </div>
             </div>
         </header>
 
-        {{#if feature_image}}
+    {{/unless}}
 
-            <section class="gs-post-image">
-                <img src="{{img_url feature_image}}" alt="{{title}}">
-            </section>
-
-        {{/if}}
-
+    <main class="gs-post">
         <article class="gs-post-content">
             {{content}}
         </article>
+
+        {{#next_post}}
+
+            <div class="gs-post-navigation gs-post-navigation__next">
+                <a href="{{url}}">
+                    Next post
+                </a>
+            </div>
+
+        {{/next_post}}
+
+        {{#prev_post}}
+
+            <div class="gs-post-navigation gs-post-navigation__prev">
+                <a href="{{url}}">
+                    Prev post
+                </a>
+            </div>
+
+        {{/prev_post}}
+
+        <hr>
+
+        <div class="gs-comments">
+            <div class="gs-comments__wrapper">
+                <h4>Comments</h4>
+
+                <button
+                    id="gs-load-comments"
+                    class="gs-button"
+                    data-gs-comments-url="{{url absolute='true'}}"
+                    data-gs-comments-identifier="ghost-{{comment_id}}"
+                >
+                    Load comments...
+                </button>
+
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+
+        {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="5" order="published_at desc" as |related_posts|}}
+            {{#if related_posts}}
+
+                <hr>
+
+                <section class="gs-articles">
+                    <h4 class="gs-articles__title">
+                        More posts in
+                        <a href="{{@blog.url}}/tag/{{../primary_tag.slug}}/">
+                            {{../primary_tag.name}}
+                        </a>
+                    </h4>
+
+                    {{#foreach related_posts}}
+
+                        <article class="gs-articles__item {{post_class}}">
+                            <a href="{{url}}"><!-- overlaid --></a>
+                            <span class="gs-articles__item-title">
+                                {{title}}
+                            </span>
+                            <time datetime="{{date format="YYYY-MM-DD"}}">
+                                {{date format="DD MMM, YYYY"}}
+                            </time>
+                        </article>
+
+                    {{/foreach}}
+                </section>
+
+            {{/if}}
+        {{/get}}
+
     </main>
-
-    {{#next_post}}
-
-        <div class="gs-post-navigation gs-post-navigation__next">
-            <a href="{{url}}">
-                Next post
-            </a>
-        </div>
-
-    {{/next_post}}
-
-    {{#prev_post}}
-
-        <div class="gs-post-navigation gs-post-navigation__prev">
-            <a href="{{url}}">
-                Prev post
-            </a>
-        </div>
-
-    {{/prev_post}}
-
-    <hr>
-
-    <div class="gs-comments">
-        <div class="gs-comments__wrapper">
-            <h4>Comments</h4>
-
-            <button
-                id="gs-load-comments"
-                class="gs-button"
-                data-gs-comments-url="{{url absolute='true'}}"
-                data-gs-comments-identifier="ghost-{{comment_id}}"
-            >
-                Load comments...
-            </button>
-
-            <div id="disqus_thread"></div>
-        </div>
-    </div>
-
-    {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="5" order="published_at desc" as |related_posts|}}
-        {{#if related_posts}}
-
-            <hr>
-
-            <section class="gs-articles">
-                <h4 class="gs-articles__title">
-                    More posts in
-                    <a href="{{@blog.url}}/tag/{{../primary_tag.slug}}/">
-                        {{../primary_tag.name}}
-                    </a>
-                </h4>
-
-                {{#foreach related_posts}}
-
-                    <article class="gs-articles__item {{post_class}}">
-                        <a href="{{url}}"><!-- overlaid --></a>
-                        <span class="gs-articles__item-title">
-                            {{title}}
-                        </span>
-                        <time datetime="{{date format="YYYY-MM-DD"}}">
-                            {{date format="DD MMM, YYYY"}}
-                        </time>
-                    </article>
-
-                {{/foreach}}
-            </section>
-
-        {{/if}}
-    {{/get}}
 
 {{/post}}
 

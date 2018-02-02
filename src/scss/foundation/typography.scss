@@ -1,7 +1,8 @@
 html {
     font-size: $font-size-initial;
 
-    @include mobile-up {
+    // This is intentionally a specific pixel value.
+    @media screen and (min-width: 351px) {
         font-size: $font-size-base;
     }
 }
@@ -27,7 +28,7 @@ h6 {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2.75rem;
     line-height: 1.2;
 
     @include tablet-up {
