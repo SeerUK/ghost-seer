@@ -24,6 +24,16 @@
         max-width: 76rem;
     }
 
+    .kg-card-markdown:first-child {
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .kg-card-markdown:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+
     h1,
     h2,
     h3,
@@ -101,8 +111,8 @@
             border-radius: 3px;
             left: auto;
             right: auto;
-            margin-left: -150px;
-            margin-right: -150px;
+            margin-left: -10.2rem;
+            margin-right: -10.2rem;
             width: $desktop-width - ($gs-navigation-floating-size * 2);
         }
     }
@@ -149,8 +159,8 @@
         @media screen and (min-width: $desktop-width - ($gs-navigation-floating-size * 2)) {
             border-radius: 3px;
             left: auto;
-            margin-left: -12rem;
-            margin-right: -12rem;
+            margin-left: -7.2rem;
+            margin-right: -7.2rem;
             right: auto;
             width: $desktop-width - ($gs-navigation-floating-size * 2);
         }
