@@ -16,7 +16,7 @@ function measureTask() {
     if (nextWidth.client !== width.client || nextWidth.viewport !== width.viewport) {
         width = nextWidth;
         willMutate = true;
-        mutate(mutateTask);
+        mutate();
     }
 }
 

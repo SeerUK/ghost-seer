@@ -4,10 +4,18 @@
     &--no-cover {
         margin: 0 auto;
         max-width: 66rem;
-        padding: 5rem 3rem 0;
+        padding: 5rem 3rem 3rem;
         text-align: left;
 
         @include phablet-up {
+            padding: 8rem 3rem 5rem;
+        }
+
+        @media screen and (min-width: 70 * $font-size-base) {
+            padding: 8rem 3rem 3rem;
+        }
+
+        @include tablet-up {
             padding: 8rem 3rem 0;
         }
 
@@ -26,7 +34,7 @@
     }
 
     &__image {
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         bottom: 0;
@@ -38,7 +46,7 @@
 
     &__wrapper {
         backface-visibility: hidden;
-        position: absolute;
+        position: fixed;
         left: 0;
         right: 0;
         top: 50%;
