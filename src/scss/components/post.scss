@@ -3,4 +3,12 @@
     position: relative;
     z-index: 2;
     margin-top: 3rem;
+
+    @media screen and (min-width: 70 * $font-size-base) {
+        margin-top: 5rem;
+    }
+
+    @include tablet-up {
+        margin-top: 8rem;
+    }
 }

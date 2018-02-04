@@ -79,12 +79,21 @@
     }
 
     &__feature-image {
+        margin-top: 5rem;
         position: relative;
         text-align: center;
 
+        @media screen and (min-width: 70 * $font-size-base) {
+            margin-top: 8rem;
+        }
+
+        @include tablet-up {
+            margin-top: 8rem;
+        }
+
         img {
             width: 100%;
-            max-width: 96rem;
+            max-width: 90rem;
         }
     }
 
