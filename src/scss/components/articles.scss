@@ -1,17 +1,15 @@
 .gs-articles {
     max-width: 66rem;
-    margin: 0 auto;
-    padding: 3rem 0;
+    margin: 3rem auto;
+    padding: 0;
 
     // This is about the width when the content + padding will hit the sides
     @media screen and (min-width: 70 * $font-size-base) {
-        margin: 0 auto;
-        padding: 5rem 0;
+        margin: 5rem auto;
     }
 
     @include tablet-up {
-        margin: 0 auto;
-        padding: 8rem 0;
+        margin: 8rem auto;
     }
 
     @include post-tablet-up {

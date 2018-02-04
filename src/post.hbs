@@ -4,78 +4,45 @@
 
 {{#post}}
 
-    {{#if feature_image}}
+    <header class="gs-post-header {{#if feature_image}}gs-post-header--featured-image{{/if}}">
+        <h1 class="gs-post-header__title">
+            {{title}}
+        </h1>
 
-        <header class="gs-post-header gs-post-header--cover">
-            <div class="gs-post-header__image" style="background-image: url('{{img_url feature_image}}')"></div>
-
-            <div class="gs-post-header__wrapper">
-                <h1 class="gs-post-header__title">
-                    {{title}}
-                </h1>
-
-                <div class="gs-post-header__meta">
-                    <div class="gs-post-header__meta-author">
-                        By {{author}}
-                    </div>
-                    {{#if tags}}
-                        <div class="gs-post-header__meta-tags">
-                            In {{tags}}
-                        </div>
-                    {{/if}}
-                    <div class="gs-post-header__meta-date">
-                        <time datetime="{{date format="YYYY-MM-DD"}}">
-                            {{date format="DD MMM, YYYY"}}
-                        </time>
-                    </div>
-                    <div class="gs-post-header__meta-reading-time">
-                        {{reading_time}}
-                    </div>
-                </div>
+        <div class="gs-post-header__meta">
+            <div class="gs-post-header__meta-author">
+                By {{author}}
             </div>
-        </header>
-
-    {{/if}}
-
-    {{#unless feature_image}}
-
-        <header class="gs-post-header gs-post-header--no-cover">
-            <div class="gs-post-header__letter">
-                {{title.[0]}}
+            {{#if tags}}
+                <div class="gs-post-header__meta-tags">
+                    In {{tags}}
+                </div>
+            {{/if}}
+            <div class="gs-post-header__meta-date">
+                <time datetime="{{date format="YYYY-MM-DD"}}">
+                    {{date format="DD MMM, YYYY"}}
+                </time>
             </div>
-
-            <h1 class="gs-post-header__title">
-                {{title}}
-            </h1>
-
-            <div class="gs-post-header__meta">
-                <div class="gs-post-header__meta-author">
-                    By {{author}}
-                </div>
-                {{#if tags}}
-                    <div class="gs-post-header__meta-tags">
-                        In {{tags}}
-                    </div>
-                {{/if}}
-                <div class="gs-post-header__meta-date">
-                    <time datetime="{{date format="YYYY-MM-DD"}}">
-                        {{date format="DD MMM, YYYY"}}
-                    </time>
-                </div>
-                <div class="gs-post-header__meta-reading-time">
-                    {{reading_time}}
-                </div>
+            <div class="gs-post-header__meta-reading-time">
+                {{reading_time}}
             </div>
-        </header>
+        </div>
+    </header>
 
-    {{/unless}}
+    <!--{{#if feature_image}}-->
+
+        <!--<div class="gs-post-header__feature-image">-->
+            <!--<img src="{{img_url feature_image}}" alt="{{title}}">-->
+        <!--</div>-->
+
+    <!--{{/if}}-->
 
     <main class="gs-post">
         <article class="gs-post-content">
             {{content}}
         </article>
 
-        <hr>
+        <!--<hr>-->
 
         <div class="gs-comments">
             <div class="gs-comments__wrapper">
@@ -97,7 +64,7 @@
         {{#get "posts" filter="tags:{{primary_tag.slug}}+id:-{{id}}" limit="5" order="published_at desc" as |related_posts|}}
             {{#if related_posts}}
 
-                <hr>
+                <!--<hr>-->
 
                 <section class="gs-articles">
                     <h4 class="gs-articles__title">
@@ -126,6 +93,26 @@
         {{/get}}
 
     </main>
+
+    {{#next_post}}
+
+        <div class="gs-post-navigation gs-post-navigation__next">
+            <a href="{{url}}">
+                Next post
+            </a>
+        </div>
+
+    {{/next_post}}
+
+    {{#prev_post}}
+
+        <div class="gs-post-navigation gs-post-navigation__prev">
+            <a href="{{url}}">
+                Prev post
+            </a>
+        </div>
+
+    {{/prev_post}}
 
 {{/post}}
 
