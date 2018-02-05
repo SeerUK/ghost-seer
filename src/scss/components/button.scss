@@ -1,14 +1,13 @@
 .gs-button {
     background: $clr-background-l3;
     border: none;
-    border-radius: 0;
+    border-radius: 3px;
     color: $clr-foreground-l0;
     display: block;
     font-family: $font-family-grotesque;
     font-size: 1.6rem;
     font-weight: 600;
     height: 5rem;
-    line-height: 5rem;
     outline: none;
     text-transform: uppercase;
     width: 100%;
