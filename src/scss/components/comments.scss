@@ -2,16 +2,16 @@
     &__wrapper {
         //max-width: 66rem;
         max-width: 76rem;
-        margin: 8vw 8vw;
+        margin: 7vw 8vw 8vw;
         //margin: 3rem auto;
         //padding: 0 3rem;
 
         @include tablet-up {
-            margin: 10vw 10vw;
+            margin: 7vw 10vw 10vw;
         }
 
         @include desktop {
-            margin: 103px 10vw;
+            margin: 86.2px 10vw 103px;
         }
 
         //@include phablet-up {
