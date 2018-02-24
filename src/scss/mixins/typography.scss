@@ -1,5 +1,5 @@
 @mixin gs-type-paragraph {
-    font-family: $font-family-sans-serif;
+    font-family: $font-family-serif;
     font-size: 1.6rem;
     line-height: 1.7;
 
@@ -9,10 +9,9 @@
 }
 
 @mixin gs-type-subdued {
-    font-family: $font-family-grotesque;
-    font-weight: 600;
-    font-size: 1.2rem;
-    text-transform: uppercase;
+    font-family: $font-family-serif;
+    font-size: 1.4rem;
+    font-style: italic;
 }
 
 @mixin gs-link {

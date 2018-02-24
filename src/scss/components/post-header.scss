@@ -1,9 +1,6 @@
 .gs-post-header {
     position: relative;
-    //margin: 5rem auto 0;
     margin: 7vw 8vw 0;
-    //max-width: 66rem;
-    //padding: 0 3rem;
     text-align: left;
 
     @include tablet-up {
@@ -13,14 +10,6 @@
     @include desktop {
         margin: 86.2px 10vw 0;
     }
-
-    //@media screen and (min-width: 70 * $font-size-base) {
-    //    margin: 8rem auto 0;
-    //}
-    //
-    //@include tablet-up {
-    //    margin: 8rem auto 0;
-    //}
 
     @include post-tablet-up {
         max-width: 76rem;
@@ -88,10 +77,8 @@
     }
 
     &__feature-image {
-        //margin-top: 5rem;
         margin: 7vw 8vw;
         position: relative;
-        //text-align: center;
 
         @media screen and (min-width: 70 * $font-size-base) {
             margin-top: 8rem;

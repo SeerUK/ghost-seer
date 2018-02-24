@@ -4,116 +4,21 @@
     z-index: 2;
 
     &__wrapper {
-        max-width: 66rem;
-        margin: 0 auto;
-        padding: 5rem 3rem;
+        max-width: 76rem;
+        padding: 3rem 8vw;
 
-        @include post-tablet-up {
-            max-width: 76rem;
-        }
-
-        @include desktop {
-            padding: 8rem 3rem;
+        @include tablet-up {
+            padding: 3rem 10vw;
         }
     }
 
     &__copyright {
-        @include gs-type-subdued;
-
         color: $clr-foreground-l2;
-        text-align: center;
+        font-style: italic;
+        font-size: 1.4rem;
 
         em {
             color: $clr-foreground-l0;
-            font-style: normal;
-        }
-    }
-
-    &__subscribe {
-        font-family: $font-family-sans-serif;
-        margin: 5rem auto;
-        max-width: 500px;
-        text-align: center;
-
-        form {
-            @include clearfix;
-
-            border: 2px solid $clr-foreground-l0;
-            display: inline-block;
-            max-width: 500px;
-            width: 100%;
-
-            .form-group {
-                border: none;
-                display: block;
-                width: 100%;
-
-                @media screen and (min-width: 56 * $font-size-base) {
-                    float: left;
-                    width: 34.8rem;
-                }
-
-                input {
-                    background: transparent;
-                    border: none;
-                    color: $clr-foreground-l0;
-                    display: inline-block;
-                    font-family: $font-family-sans-serif;
-                    height: 5rem;
-                    line-height: 5rem;
-                    padding: 0 1.4rem;
-                    text-align: center;
-                    width: 100%;
-
-                    @media screen and (min-width: 56 * $font-size-base) {
-                        text-align: left;
-                    }
-
-                    &:focus {
-                        outline: none;
-                    }
-                }
-            }
-
-            button[type=submit] {
-                background: transparent;
-                border: none;
-                border-radius: 0;
-                border-top: 2px solid $clr-foreground-l0;
-                color: $clr-foreground-l0;
-                cursor: pointer;
-                display: block;
-                font-family: $font-family-grotesque;
-                font-size: 1.6rem;
-                font-weight: 700;
-                height: 5rem;
-                text-transform: uppercase;
-                width: 100%;
-
-                @media screen and (min-width: 56 * $font-size-base) {
-                    border-top: none;
-                    border-left: 2px solid $clr-foreground-l0;
-                    float: left;
-                    width: 14.8rem;
-                }
-
-                &:focus {
-                    outline: none;
-                }
-
-                &:hover {
-                    background: $clr-foreground-l0;
-                    color: $clr-background-l3
-                }
-            }
-        }
-
-        &-message {
-            @include gs-type-paragraph;
-
-            color: $clr-foreground-l0;
-            padding: 0 3rem;
-            text-align: center;
         }
     }
 }

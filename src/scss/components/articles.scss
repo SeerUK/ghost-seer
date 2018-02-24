@@ -1,8 +1,6 @@
 .gs-articles {
     max-width: 66rem;
     margin: 7% 8%;
-    //margin: 3rem auto;
-    //padding: 0;
 
     &::before,
     &::after {
@@ -21,19 +19,6 @@
     @include desktop {
         margin: 86.2px 10vw;
     }
-
-    // This is about the width when the content + padding will hit the sides
-    //@media screen and (min-width: 70 * $font-size-base) {
-    //    margin: 5rem auto;
-    //}
-    //
-    //@include tablet-up {
-    //    margin: 8rem auto;
-    //}
-    //
-    //@include post-tablet-up {
-    //    max-width: 76rem;
-    //}
 
     &__title {
         margin-top: 0;

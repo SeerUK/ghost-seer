@@ -2,7 +2,6 @@
 
 require("mq-genie");
 require("./modules/comments");
-// require("./modules/post-content-bleed");
 
 require("../scss/index.scss");
 

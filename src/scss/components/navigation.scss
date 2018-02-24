@@ -8,9 +8,7 @@
     z-index: 3;
 
     &__wrapper {
-        //margin: 0 auto;
         margin: 0 8%;
-        //padding: 0 3rem;
         position: relative;
 
         @include tablet-up  {
@@ -23,14 +21,12 @@
     }
 
     &__logo a {
-        //color: $clr-foreground-l0;
         color: #2E3943;
     }
 
     &__links {
         position: absolute;
         top: 0;
-        //right: 3rem;
         right: 0;
 
         ul,
