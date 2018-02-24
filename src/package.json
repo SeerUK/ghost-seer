@@ -2,7 +2,7 @@
   "name": "ghost-seer",
   "description": "Ghost theme for my personal blog. Edit",
   "version": "0.0.1",
-  "repository": "git@github.com:SeerUK/ghost-seer.git",
+  "repository": "git@github.com:seeruk/ghost-seer.git",
   "author": {
     "name": "Elliot Wright",
     "email": "hello@elliotdwright.com"
