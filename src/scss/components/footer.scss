@@ -5,10 +5,11 @@
 
     &__wrapper {
         max-width: 76rem;
-        padding: 3rem 8vw;
+        margin: 0 8vw;
+        padding: 3rem 0;
 
         @include tablet-up {
-            padding: 3rem 10vw;
+            margin: 0 10vw;
         }
     }
 
