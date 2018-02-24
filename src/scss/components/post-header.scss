@@ -1,17 +1,26 @@
 .gs-post-header {
     position: relative;
-    margin: 5rem auto 0;
-    max-width: 66rem;
-    padding: 0 3rem;
+    //margin: 5rem auto 0;
+    margin: 7vw 8vw 0;
+    //max-width: 66rem;
+    //padding: 0 3rem;
     text-align: left;
 
-    @media screen and (min-width: 70 * $font-size-base) {
-        margin: 8rem auto 0;
+    @include tablet-up {
+        margin: 7vw 10vw 0;
     }
 
-    @include tablet-up {
-        margin: 8rem auto 0;
+    @include desktop {
+        margin: 86.2px 10vw 0;
     }
+
+    //@media screen and (min-width: 70 * $font-size-base) {
+    //    margin: 8rem auto 0;
+    //}
+    //
+    //@include tablet-up {
+    //    margin: 8rem auto 0;
+    //}
 
     @include post-tablet-up {
         max-width: 76rem;
@@ -79,36 +88,31 @@
     }
 
     &__feature-image {
-        margin-top: 5rem;
+        //margin-top: 5rem;
+        margin: 7vw 8vw;
         position: relative;
-        text-align: center;
+        //text-align: center;
 
         @media screen and (min-width: 70 * $font-size-base) {
             margin-top: 8rem;
         }
 
         @include tablet-up {
-            margin-top: 8rem;
+            //margin-top: 8rem;
+            margin: 7vw 10vw;
+        }
+
+        @include desktop {
+            margin: 103px 10vw;
         }
 
         img {
             width: 100%;
-            max-width: 90rem;
+            max-width: 96rem;
 
             @media screen and (min-width: 90 * $font-size-base) {
                 border-radius: 3px;
             }
         }
-    }
-
-    &__letter {
-        color: $clr-background-l2;
-        font-family: $font-family-article-title;
-        position: absolute;
-        top: 50%;
-        left: -5rem;
-        font-size: 25rem;
-        transform: translateY(-35%);
-        z-index: 0;
     }
 }

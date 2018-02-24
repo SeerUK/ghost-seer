@@ -3,7 +3,7 @@ $gs-navigation-floating-size: 60px;
 .gs-post-navigation {
     display: none;
 
-    @include desktop {
+    @include tablet-up {
         display: block;
     }
 

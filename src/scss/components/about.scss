@@ -1,20 +1,30 @@
 .gs-about {
     &__wrapper {
-        max-width: 66rem;
-        margin: 3rem auto;
-        padding: 0 3rem;
-
-        @include phablet-up {
-            margin: 5rem auto;
-        }
+        //max-width: 66rem;
+        max-width: 76rem;
+        margin: 7vw 8vw;
+        //margin: 3rem auto;
+        //padding: 0 3rem;
 
         @include tablet-up {
-            margin: 8rem auto;
+            margin: 7vw 10vw;
         }
 
-        @include post-tablet-up {
-            max-width: 76rem;
+        @include desktop {
+            margin: 86.2px 10vw;
         }
+
+        //@include phablet-up {
+        //    margin: 5rem auto;
+        //}
+        //
+        //@include tablet-up {
+        //    margin: 8rem auto;
+        //}
+        //
+        //@include post-tablet-up {
+        //    max-width: 76rem;
+        //}
     }
 
     p {

@@ -1,5 +1,6 @@
 .gs-navigation {
     background: $clr-background-l2;
+    background: #E0EBF5;
     height: 6rem;
     line-height: 6rem;
     font-size: 1.6rem;
@@ -7,10 +8,14 @@
     z-index: 3;
 
     &__wrapper {
-        max-width: 66rem;
-        margin: 0 auto;
-        padding: 0 3rem;
+        //margin: 0 auto;
+        margin: 0 8%;
+        //padding: 0 3rem;
         position: relative;
+
+        @include tablet-up  {
+            margin: 0 10%;
+        }
 
         @include post-tablet-up {
             max-width: 76rem;
@@ -18,13 +23,15 @@
     }
 
     &__logo a {
-        color: $clr-foreground-l0;
+        //color: $clr-foreground-l0;
+        color: #2E3943;
     }
 
     &__links {
         position: absolute;
         top: 0;
-        right: 3rem;
+        //right: 3rem;
+        right: 0;
 
         ul,
         ol {
