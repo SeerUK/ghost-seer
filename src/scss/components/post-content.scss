@@ -29,7 +29,12 @@
 
     .kg-card-markdown {
         > * {
-            max-width: 76rem;
+            max-width: 100%;
+
+            // Magic number for when the body content stops expanding.
+            @media screen and (min-width: 95 * $font-size-base) {
+                max-width: 76rem;
+            }
         }
 
         > pre,
@@ -101,6 +106,7 @@
     iframe {
         display: block;
         margin: 3rem 0;
+        max-width: 100%;
     }
 
     hr {
